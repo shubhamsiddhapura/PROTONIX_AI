@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/CSS/Terms&Con.css">
+  <link rel="stylesheet" href="./src/CSS/nav.css">
+  <link rel="stylesheet" href="./src/CSS/footer.css">
+  <title>Terms and Conditions</title>
+  <link rel="icon" href="./src/Assets/logohead.png" type="image/x-icon">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+  <div class="terms-conditions-container">
+    <h1>Terms and Conditions</h1>
+    <p>
+      Protonix Ai Pvt. Ltd. (hereinafter referred to as "Protonix Ai")
+      maintains this website ("Site") for information regarding our products and services. Please
+      feel free to browse the Site.
+    </p>
+    <p>
+      Your access to and use of the Site is subject to the following terms and conditions,
+      including any future revisions ("Terms and Conditions"), and all applicable laws. By
+      accessing and browsing the Site, you accept these Terms and Conditions.
+    </p>
+
+    <h2>1. Use of the Site</h2>
+    <p>
+      The Site, and all the content, materials, information, software, products, and services
+      provided on the Site, are provided on an "as is" and "as available" basis. Perceptron
+      Technologies expressly disclaims all warranties of any kind, whether express or implied,
+      including, but not limited to, the implied warranty of merchantability, fitness for a
+      particular purpose, and non-infringement.
+    </p>
+
+    <h2>2. Changes to Content</h2>
+    <p>
+      The content and the projects described or depicted on the Site are subject to change without
+      notice. Unauthorized reproduction or use of the materials may be a violation of applicable
+      copyright laws. All future materials may be subject to copyright protection.
+    </p>
+
+    <h2>3. Limitation of Liability</h2>
+    <p>
+      Protonix Ai assumes no responsibility and shall not be liable for any damages
+      to, or viruses that may infect, your computer, equipment, or other property on account of
+      your access to, use of, or browsing the Site, or your downloading of any materials, data,
+      text, images, video, or audio from the Site.
+    </p>
+
+    <h2>4. Intellectual Property</h2>
+    <p>
+      Materials displayed on the Site are either the property of Protonix Ai or are
+      used with permission. The use of these materials by you or anyone else authorized by you is
+      prohibited unless expressly permitted by these Terms and Conditions or explicit written
+      permission is obtained from Protonix Ai. Any unauthorized use of the images or
+      content may violate copyright laws, trademark laws, or the laws of privacy and publicity.
+    </p>
+
+    <h2>5. Third-Party Links</h2>
+    <p>
+      Protonix Ai is not responsible for the content of any other site linked to or
+      from the Site. Your linking to any other site is entirely at your own risk. While Perceptron
+      Technologies may provide links on the Site to other websites, the inclusion of such links is
+      only for your convenience and should not be interpreted as an endorsement of the owner,
+      sponsor, or content on the linked site. Subject to applicable law, Protonix Ai
+      disclaims all warranties, express or implied, as to the accuracy, validity, legality, or
+      otherwise of any materials or information contained on linked sites.
+    </p>
+
+    <h2>6. User Conduct</h2>
+    <p>
+      You are prohibited from posting or transmitting any unlawful, threatening, harassing,
+      defamatory, libelous, obscene, pornographic, or profane material, or any material that could
+      constitute or encourage conduct that would be considered a criminal offense, give rise to
+      civil liability, or otherwise violate any law.
+    </p>
+
+    <h2>7. Changes to Terms and Conditions</h2>
+    <p>
+      Protonix Ai may revise these Terms and Conditions at any time by updating this
+      post. Since you are bound by these Terms and Conditions, please visit this page regularly to
+      stay informed about any changes.
+    </p>
+  </div>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript to load navbar and footer dynamically -->
+    <script>
+        // Function to load HTML from another file
+        function loadHTML(id, filePath) {
+          fetch(filePath)
+            .then(response => response.text())
+            .then(data => document.getElementById(id).innerHTML = data)
+            .catch(error => console.error(`Error loading ${filePath}:`, error));
+        }
+      
+        // Load Navbar and Footer
+        loadHTML("navbar-placeholder", "nav.html");
+        loadHTML("footer-placeholder", "footer.html");
+      </script>
+
+<script src="./src/JS/nav.js"></script>
+
+
+</body>
+</html>

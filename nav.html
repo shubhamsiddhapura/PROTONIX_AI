@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./CSS/nav.css">
+</head>
+<body>
+
+  <div class="navbar-main-container">
+    <header class="navbar-header">
+      <nav class="navbar-transparent-blur">
+        <div class="navbar-logo">
+          <a href="./index.html">
+            <img src="./src/Assets/logoimg .png" alt="Company Logo" class="navbar-logo-gif">
+          </a>
+        </div>
+
+
+        <!-- Hamburger Menu Icon -->
+        <button class="hamburger-menu" onclick="toggleMenu()">
+          &#9776; <!-- Hamburger icon -->
+        </button>
+        
+        <ul class="navbar-options-container">
+          <li class="navbar-option-item">
+            <a href="./index.html">Home</a>
+          </li>
+          <li class="navbar-option-item">
+            <a href="./service.html">Services</a>
+          </li>
+          <!-- Technologies Dropdown -->
+          <li class="navbar-option-item navbar-dropdown">
+            <a href="./technologies.html">Technology</a>
+            <div class="dropdown-content">
+              <div class="dropdown-section">
+                <a href="frontend.html"><h4>Frontend</h4></a>
+                <a href="frontend.html#html-css-js">HTML/CSS/JS</a>
+                <a href="frontend.html#react">React</a>
+                <a href="frontend.html#angular">Angular</a>
+              </div>
+
+
+              <div class="dropdown-section">
+                <a href="backend.html"><h4>Backend</h4></a>
+                <a href="backend.html#node">Node</a>
+                <a href="backend.html#python">Python</a>
+                <a href="backend.html#java">Java</a>
+                <a href="backend.html#Csharp">C#</a>
+                <a href="backend.html#rdbms">RDBMS</a>
+                <a href="backend.html#nosql">NoSQL</a>
+              </div>
+              <div class="dropdown-section">
+                <a href="mobile.html"><h4>Mobile</h4></a>
+                <a href="mobile.html#flutter">Flutter</a>
+                <a href="mobile.html#reactnative">React Native</a>
+                <a href="mobile.html#ios">iOS</a>
+                <a href="mobile.html#android">Android</a>
+
+
+              </div>
+              <div class="dropdown-section">
+                <a href="cloud.html"><h4>Cloud</h4></a>
+                <a href="cloud.html#cicd">CICD</a>
+                <a href="cloud.html#devops">DevOps</a>
+                <a href="cloud.html#aws">AWS & Azure</a>
+
+              </div>
+
+              
+              <div class="dropdown-section">
+                <a href="qualityassurance.html"><h4>Quality Assurance</h4></a>
+                <a href="qualityassurance.html#manual">Manual Testing</a>
+                <a href="qualityassurance.html#automated">Automated Testing</a>
+                <a href="qualityassurance.html#software">Software Testing</a>
+                <a href="qualityassurance.html#VAPT">VAPT Testing</a>
+              </div>
+              <div class="dropdown-section explore-all">
+                <a href="./technologies.html" class="explore-all-button">Explore All</a>
+              </div>
+            </div>
+          </li>
+          <li class="navbar-option-item">
+            <a href="./aboutus.html">About Us</a>
+          </li>
+          <li class="navbar-option-item">
+            <a href="./Contact_Us.html">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <script src="./src/JS/nav.js"></script>
+</body>
+</html>

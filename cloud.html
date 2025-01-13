@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="./src/CSS/frontend.css">
+  <title>Cloud Technologies</title>
+  <link rel="icon" href="./src/Assets/logohead.png" type="image/x-icon">
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <!-- Cover Photo Section -->
+  <section class="cover-photo">
+    <img src="./src/Assets/cloudcover.avif" alt="Cover Image" class="cover-image">
+    <h1>Cloud Technologies</h1>
+  </section>
+
+  <!-- CI/CD Section -->
+  <section class="technology-content tech-1" id="cicd">
+    <div class="text">
+      <h2>CI/CD</h2>
+      <p>We provide comprehensive CI/CD (Continuous Integration/Continuous Deployment) services to streamline and automate your software development processes. Our expertise includes setting up robust CI/CD pipelines that enable frequent code integrations, automated testing, and seamless deployments across various environments. By leveraging modern tools and frameworks, we ensure that your development teams can deliver high-quality software faster and more reliably. Our CI/CD solutions facilitate collaboration, improve code quality, and reduce the risk of deployment errors, allowing you to respond quickly to changes in requirements and maintain a competitive edge in the market.</p>
+      <h3>Why Use CI/CD?</h3>
+      <div class="capsule-container">
+        <span class="capsule">Automated Testing</span>
+        <span class="capsule">Faster Delivery</span>
+        <span class="capsule">Reduced Errors</span>
+        <span class="capsule">Scalability</span>
+        <span class="capsule">Version Control Integration</span>
+        <span class="capsule">Feedback Loops</span>
+        <span class="capsule">Enhanced Collaboration</span>
+      </div>
+    </div>
+    <div class="image">
+      <img src="./src/Assets/cicd.jpg" alt="CI/CD Image">
+    </div>
+  </section>
+
+  <!-- DevOps Section -->
+  <section class="technology-content tech-2" id="devops">
+    <div class="image">
+      <img src="./src/Assets/devops11.jpg" alt="DevOps Image">
+    </div>
+    <div class="text">
+      <h2>DevOps</h2>
+      <p>We offer expert DevOps services designed to enhance collaboration between development and operations teams, streamlining the software development lifecycle. Our approach integrates continuous integration, continuous deployment (CI/CD), and automation to improve efficiency, reduce deployment times, and ensure consistent software quality. By leveraging modern tools and practices, we enable infrastructure as code (IaC), monitoring, and proactive management of your applications and infrastructure. Our DevOps solutions empower your organization to respond quickly to market changes, increase operational efficiency, and deliver high-quality software solutions that meet your business objectives.</p>
+      <h3>Why Choose DevOps?</h3>
+      <div class="capsule-container">
+        <span class="capsule">Faster Time to Market</span>
+        <span class="capsule">Increased Efficiency</span>
+        <span class="capsule">Improved Collaboration</span>
+        <span class="capsule">Continuous Monitoring</span>
+        <span class="capsule">Scalability</span>
+        <span class="capsule">Enhanced Security</span>
+        <span class="capsule">Automated Workflows</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- AWS and Azure Section with Combined Text -->
+<section class="technology-content tech-4" id="aws">
+    <div class="text">
+      <h2>AWS and Azure</h2>
+      <p>We provide comprehensive cloud services to help businesses leverage the full potential of cloud computing. Our expertise includes cloud migration, architecture design, and management across major platforms such as AWS, Azure, and Google Cloud. We assist organizations in optimizing their cloud environments for performance, scalability, and security, ensuring seamless integration with existing systems. By adopting best practices in cloud-native development and management, we enable you to reduce costs, enhance collaboration, and increase flexibility in your operations. Whether you’re looking to migrate to the cloud, implement a multi-cloud strategy, or manage your cloud infrastructure, we deliver tailored solutions that align with your business goals.</p>
+      <h3>Why Choose AWS and Azure?</h3>
+      <div class="capsule-container">
+        <span class="capsule">Global Availability</span>
+        <span class="capsule">High Scalability</span>
+        <span class="capsule">Comprehensive Service Portfolio</span>
+        <span class="capsule">Hybrid Cloud Capabilities</span>
+        <span class="capsule">Strong Security Measures</span>
+        <span class="capsule">Enterprise-Grade Solutions</span>
+        <span class="capsule">Continuous Innovation</span>
+        <span class="capsule">Reliable Support and Documentation</span>
+      </div>
+    </div>
+    <div class="image">
+      <img src="./src/Assets/aws.png" alt="Cloud Image">
+    </div>
+  </section>
+  
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    // Function to load HTML from another file
+    function loadHTML(id, filePath) {
+      fetch(filePath)
+        .then(response => response.text())
+        .then(data => document.getElementById(id).innerHTML = data)
+        .catch(error => console.error(`Error loading ${filePath}:`, error));
+    }
+
+    // Load Navbar and Footer
+    loadHTML("navbar-placeholder", "nav.html");
+    loadHTML("footer-placeholder", "footer.html");
+  </script>
+
+<script src="./src/JS/nav.js"></script>
+
+</body>
+</html>

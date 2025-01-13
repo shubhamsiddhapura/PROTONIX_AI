@@ -1,0 +1,85 @@
+# Query: font-family
+# ContextLines: 1
+
+17 results - 9 files
+
+CSS\aboutus.css:
+   66      color: #666;
+   67:     font-family: 'sans-serif';
+   68  
+
+  154      font-size: 12px;
+  155:     font-family: 'sans-serif';
+  156  }
+
+  178      color: #3b3b3b;
+  179:     font-family: 'sans-serif';
+  180  }
+
+CSS\Contact_Us.css:
+  1  body {
+  2:     font-family: 'sans-serif';
+  3      margin: 0;
+
+CSS\frontend.css:
+  64      color: #666;
+  65:     font-family: 'sans-serif';
+  66  }
+
+CSS\home2.css:
+  47  body {
+  48:   font-family: sans-serif;
+  49    margin: 0;
+
+  88  font-weight: 600;
+  89: font-family: 'san-serif';
+  90  transition: color 0.3s;
+
+CSS\nav.css:
+   2  body {
+   3:   font-family: sans-serif;
+   4    margin: 0;
+
+  60      font-weight: 600;
+  61:     font-family: sans-serif;
+  62      transition: color 0.3s; 
+
+CSS\PrivacyPolicy.css:
+  6      padding: 20px;
+  7:     font-family: Arial, sans-serif;
+  8      line-height: 1.6;
+
+CSS\service.css:
+  3    margin: 0;
+  4:   font-family: Arial, sans-serif;
+  5  }
+
+CSS\tech.css:
+   1  body {
+   2:     font-family: sans-serif;
+   3      margin: 0;
+
+  12      color: #333;
+  13:     font-family:  sans-serif;
+  14  } */
+
+  42      font-size: 4rem;
+  43:     font-family: sans-serif;
+  44  }
+
+  49      font-size: 1.2rem;
+  50:     font-family: 'Calibri', sans-serif;
+  51  }
+
+  64      color: #2f2f2f;
+  65:     font-family: 'Calibri', sans-serif;
+  66  }
+
+CSS\Terms&Con.css:
+  7      padding: 20px;
+  8:     font-family: Arial, sans-serif;
+  9      line-height: 1.6;
+
+
+
+

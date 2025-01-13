@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="./src/CSS/aboutus.css">
+  <link rel="stylesheet" href="./src/CSS/nav.css">
+  <title>About Us</title>
+  <link rel="icon" href="./src/Assets/logohead.png" type="image/x-icon">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+<!-- Cover Photo Section --> 
+<section class="cover-photo">
+  <img src="./src/Assets/about2.jpg" alt="Cover Image" class="cover-image">
+  <h1>About Us</h1>
+</section>
+
+
+<!-- Our Vision Section -->
+<section class="vision-section">
+    <div class="vision-content">
+      <div class="text">
+        <h2>Our Vision</h2>
+        <p>We envision a future where technology unites with human potential to address complex challenges. Our vision is to harness advanced technology for intelligent, scalable solutions that drive meaningful change across industries. Through innovation and collaboration, we empower growth, efficiency, and security, striving to create a smarter, safer, and more sustainable world. By unlocking new possibilities, we aim to inspire creativity and ensure a positive impact on society and the environment, paving the way for a better future for generations to come.</p>
+      </div>
+      <div class="image">
+        <img src="./src/Assets/vission.jpeg" alt="Vision Image">
+      </div>
+    </div>
+  </section>
+  
+  <!-- Our Mission Section -->
+  <section class="mission-section">
+    <div class="mission-content">
+      <div class="image">
+        <img src="./src/Assets/mission2.jpeg" alt="Mission Image">
+      </div>
+      <div class="text">
+        <h2>Our Mission</h2>
+        <p>At Protonix Ai, we turn complex challenges into efficient digital solutions, empowering businesses to excel in a fast-paced world. With a blend of innovation and agility, we bring your vision to life—whether through advanced web platforms, user-friendly mobile apps, or intelligent technology-driven systems. From concept to launch, we work closely with you to create tailored solutions with real impact. We’re more than software; we craft experiences that drive growth, support digital evolution, and distinguish you in the competitive landscape.</p>
+      </div>
+    </div>
+  </section>
+<!-- Our Values Section -->
+ <div class="values-section">
+    <h2>Our Values</h2>
+    <p>At Protonix Ai, we are driven by our core values: integrity, innovation, collaboration, excellence, and sustainability. These principles guide our actions and decision-making, ensuring that we create value for our clients and the communities we serve.</p>
+ </div>
+<div class="container">
+    
+    <!-- First Circle and Text -->
+    <div class="item">
+        <div class="circle">
+            <img src="./src/Assets/gm3.gif" alt="Image 1">
+        </div>
+        <div class="title">Growth Mindset</div>
+        <div class="description">We embrace challenges and learn continuously to unlock our full potential.</div>
+    </div>
+
+    <!-- Second Circle and Text -->
+    <div class="item">
+        <div class="circle">
+            <img src="./src/Assets/inovation.gif" alt="Image 2">
+        </div>
+        <div class="title">Innovation</div>
+        <div class="description">We foster creativity to build solutions that shape the future.</div>
+    </div>
+
+    <!-- Third Circle and Text -->
+    <div class="item">
+        <div class="circle">
+            <img src="./src/Assets/colab.gif" alt="Image 3">
+        </div>
+        <div class="title">Collaboration</div>
+        <div class="description">We believe teamwork and diversity drive excellence.</div>
+    </div>
+
+    <!-- Fourth Circle and Text -->
+    <div class="item">
+        <div class="circle">
+            <img src="./src/Assets/excel2.png" alt="Image 4">
+        </div>
+        <div class="title">Excellence</div>
+        <div class="description">We are committed to setting high standards and exceeding expectations.</div>
+    </div>
+
+    <!-- Fifth Circle and Text -->
+    <div class="item">
+        <div class="circle">
+            <img src= "./src/Assets/adapt.gif" alt="Image 5">
+        </div>
+        <div class="title">Adaptability</div>
+        <div class="description">We thrive in change, evolving with new technologies and trends.</div>
+    </div>
+</div>
+
+  <div id="footer-placeholder"></div>
+
+
+   <script>
+    // Function to load HTML from another file
+    function loadHTML(id, filePath) {
+      fetch(filePath)
+        .then(response => response.text())
+        .then(data => document.getElementById(id).innerHTML = data)
+        .catch(error => console.error(`Error loading ${filePath}:`, error));
+    }
+  
+    // Load Navbar and Footer
+    loadHTML("navbar-placeholder", "nav.html");
+    loadHTML("footer-placeholder", "footer.html");
+  </script>
+
+<script src="./src/JS/nav.js"></script>
+
+</body>
+</html>

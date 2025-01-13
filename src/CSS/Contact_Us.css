@@ -1,0 +1,331 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    margin: 80px auto;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    margin-left: 103px;
+}
+
+.left-section, .right-section {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;    
+}
+
+.right-section {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #d0d1ce;
+    border-radius: 15px;    
+    background-color: #ece9f1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.653);
+    margin-top: 30px;
+}
+.info-box {
+    /* background-color: #f0f0f0; */
+    /* background-color: #9459ee; */
+    /* background-color: #9d66ef; */
+    height: 490px;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.info-box h1, .info-box p {
+    margin-bottom: 15px;
+    margin-top: 20px;
+    justify-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    color: #333;
+}
+.info-box h1{
+    font-size: 30px;
+}
+.contact-detail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    letter-spacing: 0.9px;
+    line-height: 1.5;   
+}
+
+.contact-detail i {
+    margin-right: 10px;
+    color: #ff0000;
+    font-size: 20px; 
+}
+
+.form-box h2 {
+    margin-bottom: -10px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 50px;
+}
+
+form label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form select, form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 400px;
+    resize: none;
+}
+
+form button {
+    padding: 10px 15px;
+    background-color: #5a67d8;
+    color: white;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100px;
+    align-self: center;
+}
+
+form button:hover {
+    background-color: #504d93;
+}
+
+
+@media (max-width: 1024px) {
+    .contact-container {
+        padding: 20px;
+        margin: 50px auto;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .left-section, .right-section {
+        padding: 20px;
+        margin: 10px;
+        margin-top: 75px;
+    }
+
+    .info-box {
+        padding: 20px;
+        height: auto;
+    }
+
+    .info-box h1 {
+        font-size: 28px;
+        margin: 0 30px 20px;
+        text-align: center;
+    }
+
+    .info-box p {
+        font-size: 1rem;
+        margin: 0 20px;
+        line-height: 1.6;
+        text-align: justify;
+    }
+
+    .contact-detail {
+        font-size: 1rem;
+        margin: 10px 0 10px 30px;
+    }
+
+    .contact-detail i {
+        font-size: 20px;
+        margin-right: 10px;
+    }
+
+    .form-box h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    form {
+        margin: 20px 30px;
+    }
+
+    form label {
+        font-size: 1rem;
+        margin: 10px 0;
+    }
+
+    form input, form select, form textarea {
+        padding: 10px;
+        font-size: 1rem;
+        width: calc(100% - 40px);
+    }
+
+    form button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        width: 100px;
+    }
+}
+
+
+@media (max-width:768px){
+
+    .left-section,.right-section{
+        margin-top: -45px;
+    }
+    .right-section {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .contact-container{
+        display: block;
+        margin-left: 10px;
+    }
+
+    .info-box{
+        height: 339px;
+    }
+
+    .info-box h1 {
+        margin-left: 10px;
+    }
+
+    .info-box p {
+        color: #333;
+        margin-top: -10px;
+        margin-bottom: -13px;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: justify;
+    }
+
+    .form-box h2 {
+        margin-left: 50px;
+        margin-bottom: -8px;
+    }
+
+    form label {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-weight: bold;
+        margin-left: 25px;
+    }
+
+    form input, form select, form textarea {
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 420px;
+        resize: none;
+        margin-left: 25px;
+    }
+
+    .contact-detail {
+        margin-left: 10px;
+    }
+    .contact-detail i {
+    margin-right: 10px;
+    color: #ff0000;
+    font-size: 20px; 
+}
+}
+
+
+
+@media (max-width: 450px) {
+    .contact-container {
+        padding: 15px;
+        margin: 60px auto;
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .left-section, .right-section {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .info-box {
+        padding: 15px;
+        margin: 0 auto;
+        height: auto;
+    }
+
+    .info-box h1 {
+        font-size: 24px;
+        margin: 0 20px 15px;
+        text-align: center;
+    }
+
+    .info-box p {
+        font-size: 0.9rem;
+        margin: 0 15px;
+        line-height: 1.4;
+        text-align: justify;
+    }
+
+    .contact-detail {
+        font-size: 0.85rem;
+        margin: 10px 0 10px 20px;
+    }
+
+    .contact-detail i {
+        font-size: 18px;
+        margin-right: 8px;
+    }
+
+    .form-box h2 {
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 0;
+    }
+
+    form {
+        margin: 15px;
+    }
+
+    form label {
+        font-size: 0.85rem;
+        margin: 5px 0;
+        margin-left: 10px;
+    }
+
+    form input, form select, form textarea {
+        padding: 8px;
+        font-size: 0.9rem;
+        width: calc(100% - 30px);
+        margin-left: 10px;
+    }
+
+    form button {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+        width: 90px;
+    }
+}

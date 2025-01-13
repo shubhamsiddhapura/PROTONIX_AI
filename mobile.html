@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="./src/CSS/frontend.css">
+  <title>Mobile App Development</title>
+  <link rel="icon" href="./src/Assets/logohead.png" type="image/x-icon">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+<!-- Cover Photo Section -->
+<section class="cover-photo">
+  <img src="./src/Assets/mobilecover.jpg" alt="Cover Image" class="cover-image">
+  <h1>Mobile App Development</h1>
+</section>
+
+<!-- Technology Sections -->
+<section class="technology-content tech-1" id="flutter">
+  <div class="image">
+    <img src="./src/Assets/flutter.png" alt="Flutter Image">
+  </div>
+  <div class="text">
+    <h2>Flutter</h2>
+    <p>We provide expert Flutter development services, creating high-performance and visually appealing cross-platform mobile applications. Using Flutter’s single codebase approach, we develop apps that run seamlessly on both iOS and Android, significantly reducing development time and cost. Our team leverages Flutter’s rich widget library and fast rendering engine to build fluid and responsive user interfaces, ensuring an engaging user experience. Whether it’s crafting new mobile solutions or enhancing existing apps, we deliver beautiful and efficient applications that align with your business goals.</p>
+    <h3>Why Choose Flutter?</h3>
+    <div class="capsule-container">
+        <span class="capsule">Hot Reload</span>
+        <span class="capsule">Cross-Platform Development</span>
+        <span class="capsule">Rich Widget Library</span>
+        <span class="capsule">Single Codebase</span>
+        <span class="capsule">Fast Performance</span>
+        <span class="capsule">Strong Community Support</span>
+        <span class="capsule">Customizable UI</span>
+    </div>
+  </div>
+</section>
+
+<section class="technology-content tech-2" id="reactnative">
+  <div class="text">
+    <h2>React Native</h2>
+    <p>We offer specialized React Native development services, enabling the creation of high-quality, cross-platform mobile applications that provide a native-like experience on both iOS and Android devices. Our team utilizes React Native's component-based architecture to build fast and responsive apps while maintaining a single codebase, which streamlines development and reduces costs. By leveraging the framework's rich ecosystem and libraries, we ensure that your mobile applications are feature-rich, visually appealing, and optimized for performance. Whether you need to develop a new mobile solution or enhance an existing app, we deliver reliable and scalable React Native applications tailored to your needs.</p>
+    <h3>Why Choose React Native?</h3>
+    <div class="capsule-container">
+        <span class="capsule">Reusable Code</span>
+        <span class="capsule">Cross-Platform Compatibility</span>
+        <span class="capsule">Fast Refresh</span>
+        <span class="capsule">Rich Ecosystem</span>
+        <span class="capsule">Easy Integration with Native Code</span>
+        <span class="capsule">Strong Community and Libraries</span>
+        <span class="capsule">Backed by Facebook</span>
+    </div>
+  </div>
+  <div class="image">
+    <img src="./src/Assets/native.png" alt="React Native Image">
+  </div>
+</section>
+
+<section class="technology-content tech-3" id="ios">
+  <div class="image">
+    <img src="./src/Assets/ios.png" alt="iOS Image">
+  </div>
+  <div class="text">
+    <h2>iOS Development</h2>
+    <p>We provide comprehensive iOS development services, specializing in creating high-quality, native applications for iPhone and iPad. Our experienced team utilizes Swift and Objective-C to build robust and user-friendly apps that deliver exceptional performance and seamless user experiences. We focus on leveraging the latest iOS features and best practices to ensure your application is not only functional but also visually appealing and intuitive. Whether you need a new app developed from scratch or enhancements to an existing one, we deliver tailored solutions that meet your business objectives and engage your users effectively.</p>
+    <h3>Why Choose iOS Development?</h3>
+    <div class="capsule-container">
+      <span class="capsule">Swift Programming Language</span>
+      <span class="capsule">High Performance</span>
+      <span class="capsule">Strong Security Features</span>
+      <span class="capsule">Rich API Integration</span>
+      <span class="capsule">Intuitive User Interface</span>
+      <span class="capsule">Dedicated Developer Tools (Xcode)</span>
+      <span class="capsule">Consistent Updates</span>
+    </div>
+  </div>
+</section>
+
+<!-- Android Development Section -->
+<section class="technology-content tech-4" id="android">
+  <div class="text">
+    <h2>Android Development</h2>
+    <p>We offer expert Android development services, specializing in creating high-performance, native applications for a wide range of Android devices. Our skilled team utilizes Java and Kotlin to build robust, user-friendly apps that deliver seamless functionality and an exceptional user experience. By staying updated with the latest Android development trends and best practices, we ensure that your application is optimized for performance, security, and usability. Whether you require a new Android app developed from the ground up or enhancements to an existing one, we provide tailored solutions that align with your business goals and engage your target audience effectively.</p>
+    <h3>Why Choose Android Development?</h3>
+    <div class="capsule-container">
+      <span class="capsule">Wide Device Compatibility</span>
+      <span class="capsule">Open-Source Platform</span>
+      <span class="capsule">Kotlin and Java Support</span>
+      <!-- <span class="capsule">Flexible Development Environment</span> -->
+      <span class="capsule">Extensive Market Reach</span>
+      <span class="capsule">Strong Community Support</span>
+      <span class="capsule">Customizable UI Design</span>
+    </div>
+  </div>
+  <div class="image">
+    <img src="./src/Assets/android11.png" alt="Android Image">
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script>
+    // Function to load HTML from another file
+    function loadHTML(id, filePath) {
+      fetch(filePath)
+        .then(response => response.text())
+        .then(data => document.getElementById(id).innerHTML = data)
+        .catch(error => console.error(`Error loading ${filePath}:`, error));
+    }
+  
+    // Load Navbar and Footer
+    loadHTML("navbar-placeholder", "nav.html");
+    loadHTML("footer-placeholder", "footer.html");
+</script>
+
+<script src="./src/JS/nav.js"></script>
+
+
+</body>
+</html>

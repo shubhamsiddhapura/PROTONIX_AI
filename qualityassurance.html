@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="./src/CSS/frontend.css">
+  <title>Quality Assurance</title>
+  <link rel="icon" href="./src/Assets/logohead.png" type="image/x-icon">
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <!-- Cover Photo Section -->
+  <section class="cover-photo">
+    <img src="./src/Assets/QAcover.jpg" alt="Cover Image" class="cover-image">
+    <h1>Quality Assurance</h1>
+  </section>
+
+  <!-- Manual Testing Section -->
+  <section class="technology-content tech-1" id="manual">
+    <div class="text">
+      <h2>Manual Testing</h2>
+      <p>We offer comprehensive manual testing services to ensure the highest quality and reliability of your software applications. Our experienced testing team conducts thorough assessments across various platforms and environments, focusing on functionality, usability, and performance. By executing detailed test cases and scenarios, we identify and document defects early in the development process, helping to mitigate risks and enhance user satisfaction. Our manual testing services include exploratory testing, regression testing, user acceptance testing (UAT), and more, tailored to meet your specific project requirements. With a keen eye for detail and a commitment to quality, we ensure your applications perform flawlessly in real-world scenarios.</p>
+      <h3>Why Choose Manual Testing?</h3>
+      <div class="capsule-container">
+        <span class="capsule">Exploratory Testing</span>
+        <span class="capsule">Usability Feedback</span>
+        <span class="capsule">Immediate Results</span>
+        <span class="capsule">Flexibility</span>
+        <span class="capsule">Low Initial Cost</span>
+        <span class="capsule">Human Intuition</span>
+        <span class="capsule">Best for Small Projects</span>
+      </div>
+    </div>
+    <div class="image">
+      <img src="./src/Assets/manualTest.avif" alt="Manual Testing Image">
+    </div>
+  </section>
+
+  <!-- Automation Testing Section -->
+  <section class="technology-content tech-2" id="automated">
+    <div class="image">
+      <img src="./src/Assets/autoTest.png" alt="Automation Testing Image">
+    </div>
+    <div class="text">
+      <h2>Automation Testing</h2>
+      <p>We provide expert automation testing services designed to enhance the efficiency and effectiveness of your software quality assurance processes. Our team leverages advanced automation tools and frameworks to create robust test scripts that streamline repetitive testing tasks, ensuring faster feedback and reduced time-to-market. By implementing automation for regression testing, performance testing, and continuous integration, we help improve test coverage and accuracy while minimizing human error. Our tailored automation solutions are designed to align with your specific project requirements, enabling your development teams to focus on innovation while we ensure the quality and reliability of your software applications.</p>
+      <h3>Why Choose Automation Testing?</h3>
+      <div class="capsule-container">
+        <span class="capsule">Faster Test Execution</span>
+        <span class="capsule">Reusable Test Scripts</span>
+        <span class="capsule">Higher Accuracy</span>
+        <span class="capsule">Supports Continuous Integration</span>
+        <span class="capsule">Better Coverage</span>
+        <span class="capsule">Cost-Effective for Large Projects</span>
+        <span class="capsule">Reduces Manual Effort</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Software Testing Section -->
+  <section class="technology-content tech-3" id="software">
+    <div class="text">
+      <h2>Software Testing</h2>
+      <p>We offer comprehensive software testing services to ensure the quality, reliability, and performance of your applications. Our testing solutions encompass a wide range of methodologies, including manual testing, automation testing, functional testing, performance testing, security testing, and user acceptance testing (UAT). Our experienced testing team employs industry best practices and the latest tools to identify defects and ensure your software meets the highest standards. By providing thorough test planning, execution, and reporting, we help you mitigate risks, enhance user satisfaction, and achieve your business objectives while delivering a flawless product to your customers.</p>
+      <h3>Why Is Software Testing Important?</h3>
+      <div class="capsule-container">
+        <span class="capsule">Ensures Quality</span>
+        <span class="capsule">Reduces Maintenance Cost</span>
+        <span class="capsule">Prevents Bugs</span>
+        <span class="capsule">Increases Security</span>
+        <span class="capsule">Enhances User Satisfaction</span>
+        <span class="capsule">Compliance with Standards</span>
+        <span class="capsule">Supports Continuous Improvement</span>
+      </div>
+    </div>
+    <div class="image">
+      <img src="./src/Assets/softTest.png" alt="Software Testing Image">
+    </div>
+  </section>
+
+  <!-- VAPT Testing Section -->
+  <section class="technology-content tech-4" id="VAPT">
+    <div class="image">
+      <img src="./src/Assets/VAPT_Tech.png" alt="VAPT Testing Image">
+    </div>
+    <div class="text">
+      <h2>VAPT Testing (Vulnerability Assessment and Penetration Testing)</h2>
+      <p>We offer Vulnerability Assessment and Penetration Testing (VAPT) services to help organizations identify and mitigate security risks in their systems and applications. Our comprehensive VAPT process includes thorough vulnerability assessments that scan and analyze your infrastructure for weaknesses, followed by targeted penetration testing to simulate real-world attacks. This dual approach allows us to uncover potential vulnerabilities and assess their exploitability, providing you with actionable insights and recommendations to strengthen your security posture. With our VAPT services, you can enhance your organization's resilience against cyber threats, safeguard sensitive data, and ensure compliance with industry regulations.</p>
+      <h3>Why Choose VAPT Testing?</h3>
+      <div class="capsule-container">
+        <span class="capsule">Improves Security Posture</span>
+        <span class="capsule">Identifies Vulnerabilities</span>
+        <span class="capsule">Compliance with Regulations</span>
+        <span class="capsule">Real-World Attack Simulation</span>
+        <span class="capsule">Protects Sensitive Data</span>
+        <span class="capsule">Reduces Risk of Breaches</span>
+        <span class="capsule">Comprehensive Reporting</span>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    // Function to load HTML from another file
+    function loadHTML(id, filePath) {
+      fetch(filePath)
+        .then(response => response.text())
+        .then(data => document.getElementById(id).innerHTML = data)
+        .catch(error => console.error(`Error loading ${filePath}:`, error));
+    }
+
+    // Load Navbar and Footer
+    loadHTML("navbar-placeholder", "nav.html");
+    loadHTML("footer-placeholder", "footer.html");
+  </script>
+
+<script src="./src/JS/nav.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,232 @@
+/* General Footer Styling */
+.footer-container {
+  background-color: rgb(230, 230, 230);
+  color: black;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+/* Footer Columns */
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  gap: 20px;
+}
+
+.footer-left-section
+{
+  margin-right: 110px;
+}
+
+/* First Column: Logo, Vision, and Social Icons */
+.footer-logo {
+  flex: 1;
+  text-align: left;
+}
+
+.footer-logo img {
+  width: 190px;
+  margin-bottom: 15px;
+}
+
+.footer-logo p {
+  max-width: 250px;
+  font-size: 0.9rem;
+  color: #161515;
+  margin-top: 0;
+  margin-bottom: 10px; /* Add margin below paragraph for spacing */
+}
+
+/* Social Icons within the first column */
+.social-icons-horizontal {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons-horizontal li a {
+  color: #bbb;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons-horizontal li a:hover {
+  color: #fff;
+}
+
+/* Second and Third Columns */
+.footer-column {
+  flex: 1;
+  text-align: left;
+}
+
+.footer-column h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: black;
+}
+
+/* Contact Info Styling */
+.contact-info {
+  list-style: none;
+  padding: 0;
+  line-height: 25px; /* Adjusted for better spacing */
+}
+
+.contact-info li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  color: black;
+}
+
+.contact-info .contact-icon {
+  margin-right: 10px;
+  color: #161515;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+  color: black;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.footer-wrapper {
+  width: 100%;
+}
+
+.policy-links {
+  margin-bottom: 10px;
+}
+
+.policy-link {
+  margin-right: 10px;
+  padding: 5px 10px;
+  color: #333;
+  text-decoration: none;
+  border-radius: 3px;
+  font-size: 1.001rem;
+}
+
+.policy-link:hover {
+  color: #000000;
+}
+
+
+/* Responsive Styles for Footer */
+@media (max-width: 768px) {
+
+  .footer-left-section
+  {
+  margin-right: 0px;
+  }
+
+  .footer-columns {
+      flex-direction: column; /* Stack columns vertically */
+      align-items: center;    /* Center align columns */
+      padding: 0 10px;       /* Add some padding */
+  }
+
+  .footer-column {
+      text-align: center; /* Center text in each column */
+      margin-bottom: 20px; /* Add space between stacked columns */
+      width: 100%; /* Make each column take full width */
+  }
+
+  .footer-logo p {
+    max-width: none; /* Remove max-width to allow text wrapping */
+    /* margin-left: 111px; */
+  }
+
+  .social-icons-horizontal {
+    text-align: center;
+    justify-content: center;    font-size: 10px;
+  }
+  
+  .social-icons-horizontal ul li {
+    font-size: 2rem;
+  }
+
+  .social-icons-horizontal li a i{
+      font-size: 20px;
+  }
+  
+  .contact-info li {
+    font-size: 0.9rem;
+    text-align: center;
+    justify-content: center;
+    /* margin-left:295px; */
+  }
+}
+
+@media (max-width: 425px) {
+  .footer-columns {
+    flex-direction: column; /* Stack columns vertically */
+    align-items: center;    /* Center align columns */
+    padding: 0 10px;       /* Add some padding */
+}
+
+.footer-column {
+    text-align: center; /* Center text in each column */
+    margin-bottom: 20px; /* Add space between stacked columns */
+    width: 100%; /* Make each column take full width */
+}
+
+.footer-column ul{
+  margin-left: 0;
+}
+
+.footer-logo p {
+  max-width: none; /* Remove max-width to allow text wrapping */
+  /* margin-left: 111px; */
+}
+
+.social-icons-horizontal {
+  /* margin-left: 333px; */
+  text-align: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.social-icons-horizontal ul li {
+  font-size: 2rem;
+}
+
+.social-icons-horizontal li a i{
+    font-size: 20px;
+    justify-content: center;
+}
+.contact-info li {
+  font-size: 0.9rem;
+}
+}

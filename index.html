@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protonix Ai</title>
+    <link rel="icon" href="./src/Assets/logohead.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/src/CSS/home2.css">
+    <link rel="stylesheet" href="./src/CSS/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/CSS/preloader.css">
+  </head>
+  <body>
+    <!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+  <div id="preloader">
+    <video autoplay muted loop id="background-video">
+        <source src="./src/Assets/video.mp4" type="video/mp4">
+        
+    </video>
+</div>
+
+<!-- Logo Display -->
+<div id="logo-container" style="display: none;">
+    <img src="./src/Assets/logohead.png" alt="Logo" id="logo">
+</div>
+
+    <div id="main-content" style="display:none;">
+      <div class="home-container">
+        <!-- Navbar Section -->
+        <div class="homepage-navbar-main-container">
+          <header class="homepage-navbar-header">
+            <nav class="homepage-navbar-transparent-blur">
+              <div class="homepage-navbar-logo">
+                <a href="/index.html">
+                <img src="./src/Assets/logoimg .png" alt="Company Logo GIF" class="homepage-navbar-logo-gif"></a>
+              </div>
+        
+              <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div> 
+        
+              <ul class="homepage-navbar-options-container">
+                <li class="homepage-navbar-option-item"><a href="index.html">Home</a></li>
+                <li class="homepage-navbar-option-item"><a href="service.html">Services</a></li>
+                <!-- Technologies Dropdown -->
+              <li class="homepage-navbar-option-item navbar-option-item navbar-dropdown">
+                <a href="/technologies.html">Technology</a>
+                <div class="dropdown-content">
+                  <div class="dropdown-section">
+                    <a href="frontend.html"><h4>Frontend</h4></a>
+                    <a href="frontend.html#html-css-js">HTML/CSS/JS</a>
+                    <a href="frontend.html#react">React</a>
+                    <a href="frontend.html#angular">Angular</a>
+                  </div>
+                  <div class="dropdown-section">
+                    <a href="backend.html"><h4>Backend</h4></a>
+                    <a href="backend.html#node">Node</a>
+                    <a href="backend.html#python">Python</a>
+                    <a href="backend.html#java">Java</a>
+                    <a href="backend.html#Csharp">C#</a>
+                    <a href="backend.html#rdbms">RDBMS</a>
+                    <a href="backend.html#nosql">NoSQL</a>
+                  </div>
+                  <div class="dropdown-section">
+                    <a href="mobile.html"><h4>Mobile</h4></a>
+                    <a href="mobile.html#flutter">Flutter</a>
+                    <a href="mobile.html#reactnative">React Native</a>
+                    <a href="mobile.html#ios">iOS</a>
+                    <a href="mobile.html#android">Android</a>
+                  </div>
+                  <div class="dropdown-section">
+                    <a href="cloud.html"><h4>Cloud</h4></a>
+                    <a href="cloud.html#cicd">CICD</a>
+                    <a href="cloud.html#devops">DevOps</a>
+                    <a href="cloud.html#aws">AWS & Azure</a>
+                  </div>
+                  <div class="dropdown-section">
+                    <a href="qualityassurance.html"><h4>Quality Assurance</h4></a>
+                    <a href="qualityassurance.html#manual">Manual Testing</a>
+                    <a href="qualityassurance.html#automated">Automated Testing</a>
+                    <a href="qualityassurance.html#software">Software Testing</a>
+                    <a href="qualityassurance.html#VAPT">VAPT Testing</a>
+                  </div>
+                  <div class="dropdown-section explore-all">
+                    <a href="/technologies.html" class="explore-all-button">Explore All</a>
+                  </div>
+                </div>
+                <li class="homepage-navbar-option-item"><a href="aboutus.html">About Us</a></li>
+                <li class="homepage-navbar-option-item"><a href="Contact_Us.html">Contact Us</a></li>
+              </ul>
+            </nav>
+          </header>
+        </div>
+        
+    
+        <!-- Hero Section -->
+        <section id="hero-section" class="hero-section">
+          <video autoPlay loop muted playsinline class="hero-background" 
+          style="max-width: 100%;">
+          <source src="./src/Assets/bg_vid.mp4" type="video/mp4">
+        </video>
+        
+          <div class="hero-overlay">
+              <h1>Protonix Ai Pvt Ltd.</h1>
+            <h2>Catalyst for a Smarter, Safer Future</h2>
+            <!-- <p>We empower you to strike the right balance between addressing business challenges, embracing change, and accelerating your digital evolution. Our robust, tailored software solutions are crafted to bring your ideas to life.</p> -->
+          </div>
+        </section>
+    
+        <!-- Services Section -->
+        <section id="services-section" class="services-section">
+          <h2>OUR SERVICES</h2>
+          <div class="services-container">
+           
+            <div id="service-cards" class="service-cards"></div>
+            <div class="arrow-container">  
+            <button class="arrow-button left-arrow" onclick="prevCards()">←</button>
+            <button class="arrow-button right-arrow" onclick="nextCards()">→</button>
+          </div>
+          </div>
+        </section>
+        
+    
+        <!-- Features Section -->
+        <section id="features-section" class="features-section">
+          <h2>WHY CHOOSE US?</h2>
+          <div id="features-container" class="features-container"></div>
+        </section>
+    
+    <!-- Testimonial Section
+    <section class="testimonial-section">
+      <h2>Founders & Leaders</h2>
+      <div class="testimonial-container">
+        <div class="testimonial-card">
+          <a href="https://www.linkedin.com/in/jashank-desai-72b9a311b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " target="_blank">
+            <img src="./Assets/ceo3.png" alt="CEO Picture" class="testimonial-image">
+          </a>
+          <div class="testimonial-content">
+            <p class="testimonial-text">
+              “In leadership, I believe that success comes not just from navigating the present, but from envisioning a future where every challenge is an opportunity and innovation knows no boundaries.”
+            </p>
+            <h3 class="testimonial-name">Jashank Desai</h3>
+            <p class="testimonial-title">CEO & Founder</p>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <a href="https://www.linkedin.com/in/sushil-kantaria?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " target="_blank">
+            <img src="./Assets/cto.jpg" alt="CTO Picture" class="testimonial-image">
+          </a>
+          <div class="testimonial-content">
+            <p class="testimonial-text">
+              “The future of technology is defined by human-machine synergy. Our exploration today will empower us to tackle tomorrow’s greatest challenges.”
+            </p>
+            <h3 class="testimonial-name">Sushil Kantaria</h3>
+            <p class="testimonial-title">CTO</p>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    
+    <!-- Testimonial Section -->
+    <section class="testimonial-section">
+      <h2>Founders & Leaders</h2>
+      <div class="testimonial-container">
+        <!-- CEO Card -->
+        <a href="https://www.linkedin.com/in/jashank-desai-72b9a311b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="testimonial-card">
+          <img src="./src/Assets/ceo3.png" alt="CEO Picture" class="testimonial-image">
+          <div class="testimonial-content">
+            <p class="testimonial-text">
+              “In leadership, I believe that success comes not just from navigating the present, but from envisioning a future where every challenge is an opportunity and innovation knows no boundaries.”
+            </p>
+            <h3 class="testimonial-name">JASHANK DESAI</h3>
+            <p class="testimonial-title">CEO & Founder</p>
+          </div>
+        </a>
+        
+        <!-- CTO Card -->
+        <!-- <a href="https://www.linkedin.com/in/sushil-kantaria?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="testimonial-card">
+          <img src="./Assets/cto.jpg" alt="CTO Picture" class="testimonial-image">
+          <div class="testimonial-content">
+            <p class="testimonial-text">
+              “The future of technology is defined by human-machine synergy. Our exploration today will empower us to tackle tomorrow’s greatest challenges.”
+            </p>
+            <h3 class="testimonial-name">Sushil Kantaria</h3>
+            <p class="testimonial-title">CTO</p>
+          </div>
+        </a> -->
+      </div>
+    </section>
+    
+    
+    <!-- Process Section -->
+    <div class="process-wrapper" id="process-section">
+      <div class="orbit">
+        <!-- Outer Orbit -->
+        <div class="orbit-circle outer"></div>
+        <!-- Middle Orbit -->
+        <div class="orbit-circle middle"></div>
+        <!-- Inner Orbit -->
+        <div class="orbit-circle inner"></div>
+      </div>
+      <div class="steps-container">
+        <div class="steps-column left" id="steps-left-column">
+          <!-- Left steps will be populated by JavaScript -->
+        </div>
+        <div class="center-circle">
+          <h2>Process We Follow</h2>
+        </div>
+        <div class="steps-column right" id="steps-right-column">
+          <!-- Right steps will be populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+    
+    
+    <!-- Project Section -->
+    <div id="project-section" class="project-section">
+      <div class="project-content">
+        <h2>Have any project in your mind?</h2>
+        <p>We have got you covered!</p>
+      </div>
+      <div class="project-form">
+        <textarea id="project-description" placeholder="Describe your project..." rows="5"></textarea>
+        <button type="button" onclick="redirectToContact()">Submit</button>
+    </div>
+    </div>
+    
+    <div id="footer-placeholder"></div>
+    
+    <script>
+    function redirectToContact() {
+      // Get the value from the textarea
+      const projectDescription = document.getElementById("project-description").value;
+    
+      // Store the value in localStorage
+      localStorage.setItem("projectDescription", projectDescription);
+    
+      // Redirect to the contact page
+      window.location.href = "/Contact_Us.html#message";
+    }
+    </script>
+    
+    <!-- Link to JavaScript -->
+    <script src="./src/JS/home.js"></script>
+    
+    <script>
+    // Wait for the document to fully load
+    window.onload = function () {
+      // Update the URL to '/home' without reloading the page
+      if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
+        window.history.pushState({}, '', '/perceptron'); // Change 'home' to your preferred name
+      }
+    };
+    </script>
+    
+    <footer class="footer-container">
+    <div class="footer-columns">
+      <!-- First Column: Logo, Vision, and Social Icons -->
+      <div class="footer-left-section">
+        <div class="footer-column footer-logo">
+          <img src="./src/Assets/logoimg .png" alt="Company Logo">
+          <p>We envision a future where technology enhances human potential. Our mission is to leverage AI for innovative solutions that empower a smarter, safer, and more sustainable world.</p>
+          
+          <!-- Social Icons -->
+          <ul class="social-icons-horizontal">
+            <li><a href="https://www.linkedin.com/company/perceptron-tech/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <!-- <li><a href="https://github.com/PerceptronTechnologies" target="_blank"><i class="fab fa-github"></i></a></li> -->
+            <li><a href="https://www.instagram.com/protonix_ai?igsh=MWFzZXhhbTEzNjBvdQ==" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://x.com/ProtonixAI?t=8Xv3dgYwmPq8Tj7q2X6jbg&s=08" target="_blank"><i class="fab fa-x-twitter"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    
+      <!-- Second Column: Explore -->
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./service.html">Services</a></li>
+          <li><a href="./aboutus.html">About Us</a></li>
+          <li><a href="./technologies.html">Technology</a></li>
+        </ul>
+      </div>
+    
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="./Contact_Us.html">Contact Us</a></li>
+          <li><a href="./Privacypolicy.html">Privacy Policy</a></li>
+          <li><a href="./Terms&Con.html">Terms & Conditions</a></li>
+        </ul>
+      </div>
+    
+      <!-- Third Column: Get in Touch -->
+      <div class="footer-column">
+        <h3>Get in Touch</h3>
+        <ul class="contact-info">
+          <li><i class="fas fa-envelope contact-icon"></i> info@protonix.tech</li>
+          <li><i class="fas fa-phone contact-icon"></i> +91 89800 05254</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Footer Bottom: Privacy Policy, Terms of Use, and Copyright -->
+    <div class="footer-bottom">
+      <div class="footer-wrapper">
+      </div>
+      <p>Copyright &copy; 2024 Protonix Ai Pvt Ltd. All rights reserved.</p>
+    </div>
+    </footer>
+    </div>
+
+    <script src="./Preloader.js"></script>
+
+  
+</body>
+</html>

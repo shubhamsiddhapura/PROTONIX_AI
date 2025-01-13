@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services</title>
+  <link rel="icon" href="./Assets/logohead.png" type="image/x-icon">
+  <link rel="stylesheet" href="./src/CSS/nav.css">
+  <link rel="stylesheet" href="./src/CSS/footer.css">
+  <link rel="stylesheet" href="./src/CSS/service.css">
+
+
+</head>
+<body>
+ 
+  <!-- Navbar Placeholder -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Main Service Page Container -->
+  <div class="service-pg-container">
+    
+    <!-- First Section -->
+    <div class="service-pg-section">
+      <div class="service-pg-left">
+        <h1 class="service-pg-left-h1">Our Services</h1>
+        <p class="service-pg-left-para">We offer a comprehensive range of technology solutions designed to transform and elevate your business. 
+          Our expertise spans AI and machine learning solutions, custom web development, 
+          mobile app development, and specialized IT services.
+           We work closely with you to create tailored solutions that drive growth, 
+           enhance efficiency, and meet your strategic objectives. Discover how our innovative 
+           approach and dedicated team can bring your vision to life.</p>
+      </div>
+      <div class="service-pg-right">
+        <!-- <img src="./Assets/service_bg.jpg" alt="Service"> -->
+      </div>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="service-pg-cards-section">
+      <div class="service-pg-cards-wrapper" id="service-cards"></div>
+    </div>
+
+  </div>
+
+  <!-- Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+  <script src="./src/Js/service.js"></script>  
+
+   <script>
+    // Function to load HTML from another file
+    function loadHTML(id, filePath) {
+      fetch(filePath)
+        .then(response => response.text())
+        .then(data => document.getElementById(id).innerHTML = data)
+        .catch(error => console.error(`Error loading ${filePath}:`, error));
+    }
+  
+    // Load Navbar and Footer
+    loadHTML("navbar-placeholder", "nav.html");
+    loadHTML("footer-placeholder", "footer.html");
+  </script>
+  <script src="./src/JS/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="./src/CSS/frontend.css">
+  <title>Frontend Technologies</title>
+  <link rel="icon" href="./src/Assets/logohead.png" type="image/x-icon">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+<!-- Cover Photo Section -->
+<section class="cover-photo">
+  <img src="./src/Assets/frontend.jpg" alt="Cover Image" class="cover-image">
+  <h1 class="frontend-heading">Frontend Technologies</h1>
+</section>
+
+<!-- Technology Sections -->
+<section class="technology-content tech-1" id="html-css-js">
+  <div class="image">
+    <img src="./src/Assets/hcj.jpeg" alt="HTML/CSS/JS Image">
+  </div>
+  <div class="text">
+    <h2>HTML, CSS, and JavaScript</h2>
+    <p>We offer top-notch front-end development services using HTML, CSS, and JavaScript to create engaging and responsive user interfaces. Our expertise lies in building clean, well-structured HTML for content, writing efficient and maintainable CSS for styling, and using JavaScript to deliver dynamic, interactive experiences. By employing modern frameworks and best practices, we ensure that your web applications are visually appealing, fast, and user-friendly across all devices. From single-page applications to complex web platforms, we craft front-end solutions that provide a seamless and intuitive experience for your users.</p>
+        <!-- New Heading and Capsules Section -->
+        <h3>Why Choose HTML, CSS, and JavaScript?</h3>
+        <div class="capsule-container">
+          <span class="capsule">Semantic Elements</span>
+          <span class="capsule">Multimedia Support</span>
+          <!-- <span class="capsule">Canvas API</span> -->
+          <span class="capsule">Form Enhancements</span>
+          <span class="capsule">Local Storage</span>
+          <span class="capsule">Geolocation API</span>
+          <span class="capsule">Responsive Design</span>
+          <span class="capsule">Improved Accessibility</span>
+        </div>
+  </div>
+</section>
+
+<section class="technology-content tech-2" id="react">
+  <div class="text">
+    <h2>React</h2>
+    <p>We provide high-quality React development services, leveraging its component-based architecture to build fast, responsive, and scalable user interfaces. Our team specializes in creating dynamic single-page applications (SPAs) and complex web solutions with efficient state management and seamless integration of APIs. By utilizing React's reusable components and virtual DOM, we deliver high-performance applications that offer a smooth and engaging user experience. Whether it’s developing new projects or enhancing existing ones, we ensure your web applications are modern, maintainable, and optimized for performance.</p>
+    <h3>Why Choose React?</h3>
+    <div class="capsule-container">
+      <span class="capsule">Component-Based Architecture</span>
+      <span class="capsule">Virtual DOM</span>
+      <span class="capsule">JSX (JavaScript XML)</span>
+      <span class="capsule">Unidirectional Data Flow</span>
+      <span class="capsule">State Management</span>
+      <span class="capsule">Lifecycle Methods</span>
+      <span class="capsule">Hooks</span>
+      <span class="capsule">Context API</span>
+      <span class="capsule">React Router</span>
+      <!-- <span class="capsule">Rich Ecosystem and Community</span> -->
+    </div>
+  </div>
+  <div class="image">
+    <img src="./src/Assets/react.jpeg" alt="React Image">
+  </div>
+</section>
+
+<section class="technology-content tech-3" id="angular">
+  <div class="image">
+    <img src="./src/Assets/angular.jpeg" alt="Angular Image">
+  </div>
+  <div class="text">
+    <h2>Angular</h2>
+    <p>We offer comprehensive Angular development services, utilizing its robust framework to build scalable and feature-rich web applications. Our team excels at developing dynamic single-page applications (SPAs) with a strong focus on performance, maintainability, and user experience. By leveraging Angular’s powerful features, such as two-way data binding, dependency injection, and an extensive ecosystem of tools, we create efficient, modular, and highly responsive front-end solutions. From enterprise-grade applications to interactive user interfaces, we deliver reliable and scalable Angular-based projects tailored to your needs.</p>
+    <h3>Why Choose Angular?</h3>
+    <div class="capsule-container">
+      <span class="capsule">Component-Based Architecture</span>
+      <span class="capsule">TypeScript Support</span>
+      <span class="capsule">Two-Way Data Binding</span>
+      <span class="capsule">Dependency Injection</span>
+      <span class="capsule">Directives</span>
+      <span class="capsule">Reactive Programming with RxJS</span>
+      <!-- <span class="capsule">Powerful Routing</span>
+      <span class="capsule">Forms Management</span>
+      <span class="capsule">Ahead-of-Time (AOT) Compilation</span>
+      <span class="capsule">Angular CLI (Command Line Interface)</span> -->
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script>
+    // Function to load HTML from another file
+    function loadHTML(id, filePath) {
+      fetch(filePath)
+        .then(response => response.text())
+        .then(data => document.getElementById(id).innerHTML = data)
+        .catch(error => console.error(`Error loading ${filePath}:`, error));
+    }
+  
+    // Load Navbar and Footer
+    loadHTML("navbar-placeholder", "nav.html");
+    loadHTML("footer-placeholder", "footer.html");
+</script>
+
+<script src="./src/JS/nav.js"></script>
+</body>
+</html>

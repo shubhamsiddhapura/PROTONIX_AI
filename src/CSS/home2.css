@@ -1,0 +1,1723 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero-background { 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.hero-overlay h1,
+.hero-overlay h2,
+.hero-overlay p {
+  margin: 0; /* Removes any default margin */
+  padding: 0; /* Removes any default padding */
+}
+
+.hero-overlay {
+  padding-top: 2rem;
+  position: relative;
+  z-index: 2;
+  max-width: 80%;
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase; /* Ensure all text is uppercase */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  text-align: center;
+}
+
+.hero-overlay h1 {
+  font-size: 5rem; /* Balanced font size for heading */
+  color: white;
+  font-family: "Montserrat", sans-serif; /* A clean, modern sans-serif font */
+  font-weight: 700;
+  letter-spacing: 1.8px; /* Slightly increased for more spacious and modern feel */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); /* Slightly more depth for the text */
+  transition: color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.hero-overlay h1:hover {
+  color: rgb(255, 94, 0); /* Change text color to orange on hover */
+  transform: scale(1.1); /* Slightly enlarge text on hover */
+}
+
+.hero-overlay h2 {
+  font-size: 1.5rem; /* Slightly larger for more emphasis */
+  font-family: "Lora", serif; /* A stylish serif font with a classic yet modern feel */
+  font-weight: 400;
+  color: #dcdcdc; /* Slightly softer white for subheadings */
+  letter-spacing: 1.3px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* Softer shadow for subtle depth */
+}
+
+
+.hero-overlay p {
+  /* font-size: 1rem; 
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100;
+  letter-spacing: 0.8px;
+  color: #c0c0c0;  */
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff; /* Ensure consistent contrast */
+}
+
+/* General Navbar Styles (All Screens) */
+.homepage-navbar-main-container {
+position: fixed;
+width: 100%;
+top: 0;
+left: 0;
+z-index: 1000;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* Smooth transition */
+background-color: transparent; /* Keep it transparent initially */
+}
+
+/* Apply blur and shadow on scroll */
+.homepage-navbar-main-container.scrolled {
+backdrop-filter: none;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+background-color: rgba(255, 255, 255, 0.2);
+background-color: white;
+}
+
+/* Navbar Options */
+.homepage-navbar-options-container {
+list-style: none;
+display: flex;
+gap: 3rem;
+margin: 0;
+padding: 0;
+}
+
+/* Navbar Links */
+.homepage-navbar-option-item {
+color: white; /* Initial white text */
+cursor: pointer;
+position: relative;
+font-size: 1.3rem;
+font-weight: 600;
+font-family: 'san-serif';
+transition: color 0.3s;
+}
+
+.homepage-navbar-option-item a {
+color: inherit;
+text-decoration: none;
+font-family: sans-serif;
+}
+
+.homepage-navbar-option-item:hover {
+color: #f2eded;
+}
+
+.homepage-navbar-option-item::after {
+content: "";
+position: absolute;
+bottom: -2px;
+left: 0;
+width: 0;
+height: 2px;
+background-color: #080400;
+transition: width 0.3s ease;
+}
+
+.homepage-navbar-option-item:hover::after {
+width: 100%;
+}
+
+.homepage-navbar-main-container.scrolled .homepage-navbar-option-item {
+color: black; /* Change text color on scroll */
+}
+
+/* Navbar Header */
+.homepage-navbar-header {
+background: none;
+}
+
+.homepage-navbar-transparent-blur {
+height: 60px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-right: 10px;
+padding: 1rem 2rem;
+}
+
+/* Navbar Logo */
+.homepage-navbar-logo {
+  margin-top: 15px;
+width: 230px;
+height: 70px;
+overflow: hidden;
+}
+
+.homepage-navbar-logo-gif {
+width: 100%;
+height: auto;
+position: relative;
+}
+
+/* Hamburger Menu (Mobile Only) */
+.hamburger {
+display: none;
+cursor: pointer;
+}
+
+/* Hamburger Menu Lines */
+.hamburger span {
+display: block;
+width: 30px;
+height: 3px;
+background-color: rgb(223, 126, 28);
+margin: 5px 0;
+transition: 0.3s;
+}
+
+
+.navbar-options-container {
+  list-style: none;
+  display: flex;
+}
+
+.navbar-option-item {
+  position: relative;
+}
+
+.navbar-option-item a {
+  text-decoration: none;
+  padding: 10px 20px;
+  /* color: #333; */
+}
+
+/* Dropdown Content Styling */
+.navbar-dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+  
+  width: 70vw; /* Use viewport width to ensure it consumes 70% of the page width */
+  top: 30px;
+  left: -40vw; /* Center the dropdown horizontally */
+  z-index: 1;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-dropdown:hover .dropdown-content {
+  display: flex;
+  gap: 10px;
+  justify-content: space-around; /* Space out dropdown items evenly */
+}
+
+.dropdown-section {
+  flex-direction: column;
+  align-items: left;
+}
+
+.dropdown-section h4 {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+  color: black;
+}
+
+.dropdown-section a {
+  display: block;
+  color: #414141;
+  margin-bottom: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 10px;
+}
+
+.dropdown-section a:hover {
+  color: #FF6F3D; /* Highlight color */
+}
+
+.explore-all-button {
+  display: inline-block;
+  padding: 9px 15px;
+  background-color: #FF6F3D;
+  color: #fff;
+  margin-top: 230px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.explore-all-button:hover {
+  background-color: #efdeca;
+}
+
+/* Media Query for Screens 768px and Below */
+/* Media Query for Screens 768px and Below */
+@media (max-width: 768px) {
+  .homepage-navbar-options-container {
+    display: none; /* Hide menu items by default */
+    flex-direction: column; /* Stack items vertically */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Keep solid black background */
+    padding: 1rem 0;
+    border-radius: 0 0 25px 25px;
+    z-index: 999;
+  }
+
+  .homepage-navbar-option-item {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  /* Show Hamburger Icon on Small Screens */
+  .hamburger {
+    display: block;
+  }
+
+  /* When Menu is Active */
+  .menu-active .homepage-navbar-options-container {
+    display: flex;
+  }
+
+  /* Hamburger Menu Animation */
+  .menu-active .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-active .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-active .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  .homepage-navbar-main-container{
+    backdrop-filter: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    background-color: white;
+  }
+    
+
+}
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Services Section */
+.services-section {
+padding: 60px 20px;
+background-color: #fff;
+text-align: center;
+}
+
+.services-section h2 {
+margin-bottom: 40px;
+color: black;
+font-size: 2.8rem;
+}
+
+.services-container {
+display: flex;
+align-items: center;
+justify-content: center; /* Center the container */
+position: relative;
+}
+
+.arrow-button {
+background: none;
+border: none;
+font-size: 2rem;
+cursor: pointer;
+}
+
+.left-arrow {
+position: absolute;
+left: 20px;
+}
+
+.right-arrow {
+position: absolute;
+right: 20px;
+}
+
+.service-cards {
+display: flex;
+gap: 60px; /* Space between cards */
+align-items: center;
+justify-content: center;
+}
+
+.service-card {
+flex: 0 0 30%; /* Adjust the width of the cards */
+background-color:  rgb(247, 162, 112);
+border-radius: 10px;
+padding: 1.5rem;
+height: 370px;
+width: 250px;
+gap: 20px;
+box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+text-align: center; /* Center text */
+display: flex;
+flex-direction: column; /* Stack image, title, description vertically */
+justify-content: space-between; /* Space out the content */
+opacity: 0; /* Start hidden */
+transform: translateY(50px); /* Start position for slide up */
+}
+
+/* Add this new class to apply the animation */
+.service-card.animate-slide-up {
+animation: slideUp 0.9s ease forwards;
+}
+
+/* Slide-Up Animation */
+@keyframes slideUp {
+0% {
+  opacity: 0;
+  transform: translateY(80px);
+}
+100% {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
+
+.service-image {
+width: 100%;
+height: 50%; /* Image takes up 40% of the card height */
+object-fit: cover; /* Ensure the image covers the area without distortion */
+border-radius: 10px 10px 10px 10px; /* Rounded corners on the top */
+}
+
+.service-card h3 {
+font-size: 1.5rem;
+margin: 0px 0;
+}
+
+.service-card p {
+font-size: 1rem;
+color: black;
+margin: 0;
+}
+
+/* Features Section */
+.features-section {
+  padding: 80px 30px;
+  margin-bottom: 3rem;
+  /* padding-top: 25px; */
+  text-align: center;
+  overflow: hidden; /* Ensures cards stay hidden initially */
+}
+
+.features-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: black;
+  font-size: 2.7rem;
+}
+
+.features-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; 
+  flex-wrap: wrap; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  opacity: 1; /* Initially hidden for animation */
+  transform: translateX(-50px); /* Start position for left-side animation */
+  transition: opacity 0.8s ease, transform 0.8s ease; /* Smooth transition */
+}
+
+/* Triggering Animation for Features Section */
+.features-section.in-view .features-container {
+  opacity: 1; /* Fully visible */
+  transform: translateX(0); /* Reset position to slide in from the left */
+}
+
+.feature-card {
+  border-radius: 10px;
+  padding: 20px;
+  width: 220px; 
+  opacity: 1; 
+  transition: transform 0.8s ease; 
+}
+
+.feature-card:hover {
+  transform: translateY(-10px); 
+}
+
+.features-container:hover .feature-card {
+  opacity: 1; 
+}
+
+.feature-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem; 
+  margin: 0 auto 15px; 
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  color: rgb(55, 55, 54);
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: rgb(55, 55, 54);
+  margin: 0;
+}
+/* Keyframes for Sliding Animation from the Left */
+@keyframes slide-left {
+0% {
+  transform: translateX(-50px); /* Start from left */
+  opacity: 0; /* Fully transparent */
+}
+100% {
+  transform: translateX(0); /* End at its original position */
+  opacity: 1; /* Fully visible */
+}
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* Testimonial Section */
+.testimonial-section {
+display: flex;
+flex-direction: column; /* Change to column layout */
+align-items: center;    /* Center the items */
+padding: 40px;
+padding-top:2rem;
+padding-bottom: 4rem;
+background-color: #e2e2f5;
+}
+
+.testimonial-section h2 {
+margin-bottom: 25px; /* Add margin for spacing */
+font-size: 2.8rem;
+color: black;
+}
+
+.testimonial-container {
+display: flex;        /* Keep testimonials side by side */
+gap: 20px;
+justify-content: center;
+width: 100%;         /* Make sure it uses full width */
+}
+
+.testimonial-card {
+background-color: white;
+border-radius: 12px;
+padding: 25px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+display: flex;
+align-items: center;
+max-width: 500px;
+width: 100%;
+text-decoration: none; /* Remove underline */
+color: inherit; 
+}
+
+.testimonial-card:hover {
+  cursor: pointer; /* Optional: Add pointer on hover for a clickable feel */
+}
+
+.testimonial-image {
+width: 100px;
+height: 150px;
+object-fit: cover;
+margin-right: 20px;
+}
+
+.testimonial-content {
+max-width: 350px;
+}
+
+.testimonial-text {
+font-size: 1rem;
+color: #555;
+margin-bottom: 10px;
+}
+
+.testimonial-name {
+font-size: 1.2rem;
+font-weight: bold;
+color: #333;
+margin: 5px 0;
+}
+
+.testimonial-title {
+font-size: 0.9rem;
+color: #777;
+}
+
+@media (max-width: 768px) {
+.testimonial-container {
+  flex-direction: column; /* Stack cards on small screens */
+  align-items: center;
+}
+}
+
+/* Project section */ 
+
+.project-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5f5; /* Adjust the background color as needed */
+  padding: 40px;
+}
+
+.project-content {
+  flex: 1;
+  margin-left: 90px;
+}
+
+.project-content h2 {
+  font-size: 2rem;
+  color: black; 
+}
+
+.project-content p {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+.project-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.project-form textarea {
+  width: 500px;
+  height: 250px;
+  resize: none;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.project-form button {
+  padding: 10px 25px;
+  margin-left: 170px;
+  margin-top: 30px;
+  background-color: #170d09; /* Button color */
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 200px;
+}
+
+.project-form button:hover {
+  background-color: #a26246; /* Complementary warm tone for hover */
+  color: #fff; /* Keep text white for better readability */
+
+} .process-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  position: relative;
+  margin-top: 40px;
+}
+
+.center-circle {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  margin-top: 306px;
+}
+
+.center-circle h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.center-circle p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+}
+
+.steps-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.left {
+  align-items: flex-end;
+}
+
+.right {
+  align-items: flex-start;
+}
+
+.step-box {
+  width: 250px; /* Adjust width */
+  height: 150px; /* Add height for balance */
+  padding: 1rem; /* Adjust padding for better space */
+  background-color: rgb(248, 151, 94);
+  border-radius: 30px; /* High border-radius for pill shape */
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: margin 0.3s ease;
+}
+
+.step-box .icon {
+  font-size: 2rem;
+  
+}
+
+.step-box .icon img {
+  height: 50px;
+  width: 50px;
+}
+
+.step-box h3 {
+  font-size: 1rem; /* Smaller font size */
+  color: #333;
+  margin-bottom: 0;
+}
+
+.step-box p {
+  font-size: 0.8rem; /* Adjust font size for readability */
+  color: #666;
+}
+
+.steps-column.left .step-box:nth-child(1),
+.steps-column.left .step-box:nth-child(3) {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  left: 100px;
+  margin-top: 4rem;
+}
+
+.steps-column.right .step-box:nth-child(1),
+.steps-column.right .step-box:nth-child(3) {
+  margin-top: 4rem;
+  margin-bottom: 0.5rem;
+  right: 100px;
+}
+
+.steps-column.left .step-box:nth-child(2),
+.steps-column.right .step-box:nth-child(2) {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.left .step-box::before {
+  right: -30px;
+}
+
+.right .step-box::before {
+  left: -30px;
+}
+
+.steps-column.left .step-box:nth-child(1)::before {
+  transform: rotate(30deg);
+}
+
+.steps-column.left .step-box:nth-child(2)::before {
+  transform: rotate(0deg);
+}
+
+.steps-column.left .step-box:nth-child(3)::before {
+  transform: rotate(-30deg);
+}
+
+.steps-column.right .step-box:nth-child(1)::before {
+  transform: rotate(-30deg);
+}
+
+.steps-column.right .step-box:nth-child(2)::before {
+  transform: rotate(0deg);
+}
+
+.steps-column.right .step-box:nth-child(3)::before {
+  transform: rotate(30deg);
+}
+
+/* Orbit styles */
+.orbit {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 40px;
+  left: 0;
+  z-index: 0;
+}
+
+.orbit-circle {
+  position: absolute;
+  border: 2px dashed rgba(255, 10, 10, 0.5);
+  border-radius: 50%;
+  animation: rotate 20s linear infinite;
+}
+
+.outer {
+  width: 700px;
+  height: 700px;
+  top: calc(50% - 350px);
+  left: calc(50% - 350px);
+}
+
+.middle {
+  width: 550px;
+  height: 550px;
+  top: calc(50% - 275px);
+  left: calc(50% - 275px);
+}
+
+.inner {
+  width: 400px;
+  height: 400px;
+  top: calc(50% - 200px);
+  left: calc(50% - 200px);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add styles for the dots moving along the orbits */
+.orbit-circle::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: red;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: move 20s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  25% {
+    transform: translate(-50%, 100%);
+  }
+  50% {
+    transform: translate(-50%, 100%);
+  }
+  75% {
+    transform: translate(-50%, 0);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
+/* //////////////// */
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+/* Hero Section */
+.hero-section {
+  height: 70vh;
+  padding: 1rem;
+}
+.hero-overlay {
+  padding: 1rem;
+  max-width: 95%;
+}
+.hero-overlay h1 {
+  font-size: 1.8rem;
+}
+.hero-overlay p {
+  font-size: 1rem;
+}
+
+/* Navbar */
+.homepage-navbar-options-container {
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+.homepage-navbar-logo {
+  width: 150px;
+  height: 50px;
+}
+
+/* Services Section */
+.services-container {
+  flex-direction: column;
+  gap: 20px;
+}
+.service-cards {
+  flex-direction: column;
+  gap: 15px;
+}
+.service-card {
+  width: 90%; /* Full width on mobile */
+  margin: 0 auto;
+}
+
+  /* Service Section Arrow Buttons */
+  .arrow-container {
+    display: flex;
+    justify-content: space-between; /* Align arrows to sides */
+    width: 100%; /* Full width of the container */
+    padding: 0 20px; /* Padding for better spacing */
+    position: relative; /* Keep them in line with the service card */
+    margin-top: 15px; /* Space between the service card and arrows */
+  }
+
+  .left-arrow, .right-arrow {
+    font-size: 2rem; /* Adjust arrow size */
+    cursor: pointer; /* Change cursor to pointer for better UX */
+  }
+
+/* Features Section */
+.features-container {
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 1rem;
+}
+.feature-card {
+  width: 100%; /* Full width */
+  margin-bottom: 15px;
+}
+
+/* Testimonial Section */
+.testimonial-container {
+  flex-direction: column;
+  gap: 20px;
+}
+.testimonial-card {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Project Section */
+.project-section {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.project-content {
+  margin-left: 0;
+}
+.project-form textarea {
+  width: 100%;
+}
+.project-form button {
+  margin: 20px auto;
+}
+
+/* Process Section */
+/* Hide original process section elements on small screens */
+@media (max-width: 768px) {
+/* Hide the orbit circles */
+
+
+/* Hide the steps container */
+.steps-container {
+  display: none; /* Hide original steps container */
+}
+
+/* Hide the process wrapper to ensure no other elements are displayed */
+.process-wrapper {
+  display: none; /* Hide entire process wrapper */
+}
+
+/* Hide specific step-related elements */
+.steps-column {
+  display: none; /* Hide columns that hold the steps */
+}
+
+/* If there are other elements to hide, add them here */
+#steps-left-column,
+#steps-right-column {
+  display: none; /* Hide specific step columns */
+}
+
+  /* Hide orbit circles */
+  .orbit {
+    display: none; /* Hide orbit */
+  }
+
+  /* Hide steps columns */
+  .steps-column {
+    display: none; /* Hide original step columns */
+  }
+
+  /* Stack the steps for small screens */
+  .process-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack steps */
+    align-items: center; /* Center align the steps */
+    padding: 2rem;
+  }
+
+  .step-box {
+    width: 100%; /* Full width for cards */
+    max-width: 300px; /* Limit width for better visibility */
+    margin: 10px 0; /* Spacing between cards */
+    background-color: #f0f8ff; /* Card color */
+    border-radius: 12px; /* Rounded corners */
+    padding: 20px; /* Padding for cards */
+    text-align: center; /* Center text */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  }
+
+  /* Card icon size adjustments */
+  .icon img {
+    height: 50px; /* Size for icons */
+    width: 50px;
+  }
+
+
+.arrow-button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  margin: 10px; /* Margin for buttons */
+}
+}
+
+}
+
+/* Responsive Styles for 663px and Below */
+@media (max-width: 663px) {
+/* General */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Navbar */
+.navbar-options-container {
+  flex-direction: column;
+  gap: 10px;
+  display: none; /* Initially hidden */
+  text-align: center;
+}
+
+.navbar-logo {
+  width: 120px;
+  height: 40px;
+}
+
+.navbar-toggle {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  margin: 1rem;
+}
+
+/* Hero Section */
+.hero-section {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero-overlay h1 {
+  font-size: 1.5rem;
+}
+
+.hero-overlay p {
+  font-size: 1rem;
+}
+
+/* Services Section */
+.service-cards {
+  flex-direction: column;
+  gap: 15px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Testimonial Section */
+.testimonial-container {
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.testimonial-card {
+  width: 100%;
+}
+
+/* Footer */
+.footer-columns {
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.footer-logo img {
+  width: 100px;
+}
+
+/* Process Section */
+.orbit-circle {
+  display: none; /* Hide for small screens */
+}
+}
+
+/* Fix for Hero Section and Extra Space for Widths 597px and Below */
+@media (max-width: 597px) {
+/* Reset the entire page layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensure consistent sizing */
+}
+
+html, body {
+  height: 100%; /* Ensure body takes full height */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Ensure the Hero Section Fills the Viewport */
+.hero-section {
+  min-height: 100vh; /* Use min-height to prevent overflow */
+  height: 100%; /* Ensure it fills the entire viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center;
+  padding: 0; /* Remove all padding */
+  margin: 0; /* Remove all margin */
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+.hero-overlay {
+  padding: 1rem;
+  max-width: 90%; /* Ensure content fits */
+}
+
+.hero-overlay h1 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-overlay p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Navbar Adjustments */
+.navbar-options-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Prevent margin or padding in the parent containers */
+.main-container, .content-wrapper, .hero-container {
+  margin: 0;
+  padding: 0;
+  width: 100%; /* Ensure full width */
+  height: auto; /* Adjust height automatically */
+}
+}
+
+@media (max-width: 320px) {
+
+/* Navbar */
+.homepage-navbar-main-container {
+  padding: 10px;
+}
+.homepage-navbar-options-container {
+  flex-direction: column;
+  gap: 10px; /* Stack menu items */
+  margin: 0;
+  padding: 0;
+}
+.homepage-navbar-option-item {
+  font-size: 1rem; /* Adjust font size for smaller screens */
+}
+
+/* Hero Section */
+.hero-section {
+  height: 60vh; /* Reduce height for small screens */
+  padding: 1rem;
+}
+.hero-overlay {
+  padding: 1rem;
+  max-width: 90%; /* Adjust text width */
+}
+.hero-overlay h1 {
+  font-size: 1.5rem;
+  margin-top: 55px;
+}
+
+.hero-overlay h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.hero-overlay p {
+  font-size: 0.8rem;
+}
+/* Adjust Services Container */
+.services-container {
+flex-direction: column;
+gap: 15px;
+align-items: center;
+justify-content: center;
+}
+
+/* Ensure service cards stack vertically */
+.service-cards {
+flex-direction: column;
+width: 100%;
+gap: 15px;
+margin: 0 auto;
+}
+
+.service-card {
+width: 100%; /* Full width on small screens */
+max-width: 280px; /* Restrict maximum width */
+padding: 15px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust image size within service cards */
+.service-image {
+height: 150px; /* Make sure it fits smaller screens */
+border-radius: 8px;
+}
+
+  /* Service Section Arrow Buttons */
+  .arrow-container {
+    display: flex;
+    justify-content: space-between; /* Align arrows to sides */
+    width: 100%; /* Full width of the container */
+    padding: 0 20px; /* Padding for better spacing */
+    position: relative; /* Keep them in line with the service card */
+    margin-top: 15px; /* Space between the service card and arrows */
+  }
+
+  .left-arrow, .right-arrow {
+    font-size: 2rem; /* Adjust arrow size */
+    cursor: pointer; /* Change cursor to pointer for better UX */
+  }
+
+h2 {
+font-size: 1.5rem; /* Smaller font for headers */
+}
+
+.service-card h3 {
+font-size: 1.2rem;
+}
+
+.service-card p {
+font-size: 1rem;
+line-height: 1.2;
+}
+
+/* Center-align the testimonial section and fix layout */
+.testimonial-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .testimonial-card {
+    width: 100%; /* Full width */
+    max-width: 300px; /* Ensure it fits nicely */
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align content */
+    gap: 10px; /* Space between image and content */
+    text-align: center; /* Center-align text */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+    border-radius: 12px;
+  }
+
+  .testimonial-image {
+    width: 80px; /* Resize image */
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%; /* Make it circular */
+    margin-bottom: 10px;
+  }
+
+  .testimonial-text {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .testimonial-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 5px 0;
+  }
+
+  .testimonial-title {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0;
+  }
+
+/* Process Section */
+.steps-container {
+  flex-direction: column; /* Stack steps */
+  align-items: center;
+}
+.center-circle h2 {
+  font-size: 1.2rem;
+}
+
+/* Project Section */
+.project-section {
+display: flex;
+flex-direction: column; /* Stack items vertically */
+align-items: center; /* Center align items */
+background-color: #f3a27c; /* Adjust the background color as needed */
+padding: 20px; /* Add some padding */
+border-radius: 10px; /* Rounded corners */
+margin: 20px; /* Margin around the section */
+}
+
+.project-content {
+text-align: center; /* Center text */
+margin-bottom: 15px; /* Space below the content */
+}
+
+.project-content h2 {
+font-size: 1.5rem; /* Adjust font size for small screens */
+color: #333; /* Adjust the color */
+}
+
+.project-content p {
+font-size: 1rem; /* Adjust font size for small screens */
+color: #777; /* Adjust the color */
+}
+
+.project-form {
+display: flex;
+flex-direction: column; /* Stack textarea and button */
+width: 100%; /* Full width */
+max-width: 280px; /* Limit max width for better appearance */
+align-items: center; /* Center items */
+}
+
+.project-form textarea {
+width: 100%; /* Full width for textarea */
+height: 100px; /* Adjust height for better usability */
+resize: none; /* Prevent resizing */
+padding: 10px; /* Padding for text area */
+font-size: 0.9rem; /* Adjust font size */
+border: 1px solid #ddd; /* Border styling */
+border-radius: 5px; /* Rounded corners */
+margin-bottom: 10px; /* Space below textarea */
+}
+
+.project-form button {
+padding: 10px 20px; /* Button padding */
+background-color: #170d09; /* Button color */
+color: white; /* Text color */
+font-size: 1rem; /* Adjust font size */
+border: none; /* Remove border */
+border-radius: 5px; /* Rounded corners */
+cursor: pointer; /* Pointer cursor */
+width: 100%; /* Full width */
+}
+
+.project-form button:hover {
+background-color: #a26246; /* Complementary warm tone for hover */
+color: #fff; /* Keep text white for better readability */
+}
+
+
+/* Footer */
+.footer-columns {
+  flex-direction: column; /* Stack footer columns */
+  align-items: center;
+  gap: 15px;
+}
+.footer-column {
+  text-align: center;
+}
+}
+@media (min-width: 321px) and (max-width: 375px) {
+/* Navbar */
+.homepage-navbar-main-container {
+  padding: 10px;
+}
+.homepage-navbar-options-container {
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+.homepage-navbar-option-item {
+  font-size: 1.1rem;
+}
+
+/* Hero Section */
+.hero-section {
+  height: 65vh;
+  padding: 1rem;
+}
+.hero-overlay {
+  padding: 1rem;
+  max-width: 85%;
+}
+.hero-overlay h1 {
+  font-size: 1.4rem;
+} 
+.hero-overlay p {
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+/* Services Section */
+.services-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.service-cards {
+  display: flex;
+  flex-direction: column; /* Stack cards vertically */
+  align-items: center;
+  gap: 15px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.service-card {
+  width: 100%;
+  max-width: 300px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  opacity: 0; /* Start hidden */
+  transform: translateX(100%); /* Start off-screen to the right */
+}
+
+/* Service Image */
+.service-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+  /* Service Section Arrow Buttons */
+  .arrow-container {
+    display: flex;
+    justify-content: space-between; /* Align arrows to sides */
+    width: 100%; /* Full width of the container */
+    padding: 0 20px; /* Padding for better spacing */
+    position: relative; /* Keep them in line with the service card */
+    margin-top: 15px; /* Space between the service card and arrows */
+  }
+
+  .left-arrow, .right-arrow {
+    font-size: 2rem; /* Adjust arrow size */
+    cursor: pointer; /* Change cursor to pointer for better UX */
+  }
+
+
+/* Animations for Small Screens */
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Testimonial Section */
+.testimonial-container {
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.testimonial-card {
+  width: 95%;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-image {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
+/* Process Section */
+.steps-container {
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.center-circle h2 {
+  font-size: 1.3rem;
+}
+
+/* Project Section */
+.project-section {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.project-form textarea {
+  width: 95%;
+  font-size: 1rem;
+}
+
+.project-form button {
+  width: 100%;
+  margin-top: 15px;
+}
+
+/* Footer */
+.footer-columns {
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.footer-column {
+  text-align: center;
+}
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) { /* Adjust styles for 1024px width */
+/* Hero Section */
+.hero-section {
+  height: 80vh; /* Adjust height for medium screens */
+  padding: 2rem;
+}
+.hero-overlay {
+  padding: 2rem;
+  max-width: 70%; /* Reduce max width for better centering */
+}
+.hero-overlay h1 {
+  font-size: 2rem; /* Adjust title size */
+}
+.hero-overlay p {
+  font-size: 1.1rem; /* Adjust paragraph size */
+}
+
+/* Navbar */
+.homepage-navbar-options-container {
+  gap: 3rem; /* Increase space between navbar items */
+}
+
+.homepage-navbar-option-item {
+ color: rgb(15, 14, 14);
+}
+
+/* Services Section */
+.services-section h2 {
+  font-size: 2.5rem; /* Increase font size for section title */
+}
+.service-card {
+  flex: 0 0 30%; /* Maintain 3 cards per row */
+  padding: 15px; /* Adjust padding */
+}
+
+/* Features Section */
+.features-section h2 {
+  font-size: 2.5rem; /* Increase font size for section title */
+}
+.feature-card {
+  width: 220px; /* Set a consistent width for feature cards */
+}
+
+/* Testimonial Section */
+.testimonial-section h2 {
+  font-size: 2.5rem; /* Increase title size */
+}
+.testimonial-card {
+  max-width: 400px; /* Set a maximum width for testimonial cards */
+}
+
+/* Project Section */
+.project-section {
+  width: 100%;
+  flex-direction: row; /* Maintain a row layout */
+  align-items: flex-start; /* Align items at the start */
+}
+.project-content {
+  margin-left: 40px; /* Adjust margin for better spacing */
+}
+
+/* Process Section */
+.steps-container {
+  flex-direction: row; /* Keep steps in a row */
+  gap: 2rem; /* Add gap between steps */
+}
+.step-box {
+  width: 250px; /* Set a fixed width for steps */
+}
+
+}
+
+/* Project Section for Medium Screens (321px to 768px) */
+@media (min-width: 321px) and (max-width: 768px) {
+.project-section {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+    background-color: #f3a27c; /* Adjust the background color */
+    padding: 30px; /* Increase padding for a more spacious look */
+    border-radius: 10px; /* Rounded corners */
+    margin: 20px; /* Margin around the section */
+}
+
+.project-content {
+    text-align: center; /* Center text */
+    margin-bottom: 20px; /* Space below the content */
+}
+
+.project-content h2 {
+    font-size: 1.8rem; /* Increase font size for medium screens */
+    color: #333; /* Adjust the color */
+}
+
+.project-content p {
+    font-size: 1.1rem; /* Increase font size for medium screens */
+    color: #777; /* Adjust the color */
+}
+
+.project-form {
+    display: flex;
+    flex-direction: column; /* Stack textarea and button */
+    width: 100%; /* Full width */
+    max-width: 400px; /* Increase max width for better appearance */
+    align-items: center; /* Center items */
+}
+
+.project-form textarea {
+    width: 100%; /* Full width for textarea */
+    height: 120px; /* Adjust height for better usability */
+    resize: none; /* Prevent resizing */
+    padding: 12px; /* Padding for text area */
+    font-size: 1rem; /* Increase font size */
+    border: 1px solid #ddd; /* Border styling */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 15px; /* Space below textarea */
+}
+
+.project-form button {
+    padding: 12px 25px; /* Increase button padding */
+    background-color: #170d09; /* Button color */
+    color: white; /* Text color */
+    font-size: 1.1rem; /* Increase font size */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    width: 100%; /* Full width */
+}
+
+.project-form button:hover {
+    background-color: #a26246; /* Complementary warm tone for hover */
+    color: #fff; /* Keep text white for better readability */
+}
+}
+

@@ -1,0 +1,379 @@
+/* Cover Photo Section */
+.cover-photo {
+    position: relative;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    margin-top: 75px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.cover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Places image behind the text */
+}
+
+
+/* Sections Styling */
+section {
+    padding: 1.1rem;
+    text-align: center;
+    margin-top: 90px;
+}
+
+.mission-section {
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+/* Vision and Mission Sections Layout */
+.vision-content, .mission-content {
+    display: flex;
+    align-items: center;
+    gap: 0rem;
+    justify-content: center;
+}
+
+/* Text Styling */
+.vision-content .text, .mission-content .text {
+    flex: 1;
+    text-align: left;
+    margin-left: 30px; /* Adjusted margin for better spacing */  
+}
+
+.vision-content .text h2, .mission-content .text h2 {
+    font-size: 2.2rem; /* Larger heading size */
+    font-weight: 600; /* Lighter weight for contrast */
+    margin-bottom: 1rem; /* Space below heading */
+    margin-left: 75px;
+
+}
+
+.vision-content .text p, .mission-content .text p {
+    font-size: 1.02rem; /* Increased paragraph size */
+    line-height: 1.6; /* Better line spacing for readability */
+    margin-bottom: 1.5rem; /* Space below paragraph */
+    margin-left: 75px;
+    text-align: justify;
+    margin-right: 89px;
+    color: #666;
+    font-family: sans-serif;
+}
+
+/* Image Styling */
+.vision-content .image, .mission-content .image {
+    flex: 1;
+}
+
+.vision-content .image img, .mission-content .image img {
+    height: auto; /* Allow height to adjust */
+    max-width: 550px; /* Limit max width */
+    border-radius: 8px;
+    margin-left: 17px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Container for the five items */
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 23px;
+    margin-left: 120px;
+    margin-right: 100px;}
+
+/* Circle style */
+.circle {
+    width: 100px;
+    height: 100px;
+    /* background-color: rgb(241 172 113); */
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 35px;
+}
+
+/* Style for images within circles */
+.circle img {
+    width:90%;
+    height: 90%;
+    object-fit: cover;
+}
+
+/* Text alignment for each item */
+.item {
+    text-align: center;
+    width: 150px;
+}
+
+/* Title and description styles */
+.title {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.description {
+    color: #666;
+    font-size: 12px;
+    font-family: 'sans-serif';
+}
+
+.values-section{
+    margin: 0px 80px;
+    justify-items: center;
+}
+
+.values-section h2 {
+    font-size: 2.5rem; /* Larger heading size */
+    margin-bottom: 1rem; /* Space below heading */
+    justify-items: center;
+    text-align: center;
+}
+
+.values-section p { 
+    margin-left: 120px;
+    margin-right: 100px;
+    font-size: 1.02rem; /* Increased paragraph size */
+    line-height: 1.6; /* Better line spacing for readability */
+    margin-bottom: 1.5rem; /* Space below paragraph */
+    text-align: justify;
+    color: #3b3b3b;
+    font-family: sans-serif;
+}
+
+
+
+
+
+/* General Responsive Styles */
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
+    .item {
+        margin-bottom: 20px; /* Space between items */
+    }
+}
+
+/* Vision and Mission Sections Responsive */
+@media (max-width: 768px) {
+
+    .vision-content, .mission-content {
+        flex-direction: column; /* Stack text and image vertically */
+        text-align: center; /* Center text */
+        flex-direction: row-reverse;
+    }
+    .mission-section  {
+        margin-top: 5px;
+        margin-right: 25px;
+    }
+    .vision-content .text, .mission-content .text {
+        margin-left: 0; /* Remove left margin */
+        margin-top: -40px; /* Add spacing between elements */
+        text-align: center;
+    }
+
+    .vision-content .text h2, .mission-content .text h2 {
+        font-size: 1.8rem; /* Adjust heading size for mobile */
+        margin-inline-start: -23px;
+        /* text-align: center; */
+    }
+
+    .vision-content .image img, .mission-content .image img {
+        max-width: 100%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+        width: 350px;
+        margin-top: -30px;
+    }    
+    .vision-content .text p, .mission-content .text p {
+        font-size: 1rem; /* Adjust paragraph size for mobile */
+        margin-left: 13px;
+        margin-right: 13px;
+    }
+    .values-section {
+        margin: 20px; /* Adjust margin for smaller screens */
+    }
+
+    .values-section h2 {
+        font-size: 2rem; /* Smaller heading size */
+    }
+
+    .values-section p {
+        font-size: 1rem; /* Smaller paragraph size */
+    }
+
+}
+
+
+
+@media (max-width: 430px) {
+    .cover-photo {
+        position: relative;
+        height: 222px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        margin-top: 75px;
+        border-radius: 25px;
+        overflow: hidden;
+    }
+
+ 
+    .vision-section, .mission-section {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add card-like shadow */
+        border-radius: 10px;
+        background-color: #f9f9f9; /* Light background for card effect */
+        max-width: 90%;
+        margin: 20px auto;
+    }
+
+    /* Style for headings within the vision and mission sections */
+    .vision-section h2, .mission-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        margin-top: 70px;
+    }
+
+    /* Adjusting image and alignment */
+    .vision-section .image img, .mission-section .image img {
+        width: 100%;
+        height: auto;
+        max-width: 250px; /* Limit image size for better display */
+        border-radius: 8px;
+        margin: 10px 0;
+    }
+
+    /* Paragraph styling for readability */
+    .vision-content .text p, .mission-content .text p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        text-align: justify;
+        margin: 10px 0;
+        color: #666;
+    }
+
+    /* Adjust inner containers to stack content vertically */
+    .vision-content, .mission-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .values-section{
+        margin-top: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .values-section h2 {
+        font-size: 1.85rem;
+    }
+    .values-section p{
+        margin-top: 19px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 0.9rem;
+        color: #666;
+        text-align: center;
+    }  
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 10px;
+        margin: 0 auto;
+    }
+
+    .item {
+        text-align: center;
+        width: 100%; /* Make items take full width */
+        max-width: 250px; /* Limit width to make them fit neatly */
+        padding: 10px 0; /* Add padding for spacing */
+    }
+
+    .circle {
+        width: 90px;
+        height: 90px;
+        margin: 0 auto 10px auto; /* Center the circle with spacing below */
+    }
+
+    .circle img {
+        width: 90%;
+        height: 93%;
+        object-fit: cover;
+    }
+
+    .title {
+        font-size: 1rem;
+        margin: 5px 0;
+    }
+
+    .description {
+        font-size: 0.9rem;
+        color: #666;
+        text-align: center;
+        line-height: 1.4;
+        padding: 0 10px;
+    }
+}
+
+
+/* Tablet View (768px) - Divide Values Section into Two Rows */
+@media screen and (max-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        justify-items: center;
+        margin: 0 50px;
+    }
+
+    /* Ensure the second row has two items aligned beside each other */
+    .container .item:nth-child(4), .container .item:nth-child(5) {
+        grid-column: span 1;
+    }
+}
+
+/* Mobile View (425px and below) - Stack Values Section in One Column */
+@media screen and (max-width: 425px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 20px;
+    }
+
+    .item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
