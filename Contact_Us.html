@@ -15,60 +15,66 @@
 
 </head>
 <body>
-
-  <!-- Navbar -->
-  <div id="navbar-placeholder"></div>
-
-  <!-- Contact Us Page Container -->
-  <div class="contact-us-pg-container"> 
-
-    <!-- First Section -->
-    <div class="contact-us-pg-screen-section">
-
-      <div class="contact-container">
-        <div class="left-section">
-            <div class="info-box">
-                <h1>Contact Us</h1>
-                <p>We are dedicated to empowering businesses through innovative technology solutions. Our team is committed to delivering exceptional support and expertise to meet your unique needs. Connect with us to explore how our tailored IT and AI services can help you achieve your goals. We look forward to building a successful partnership with you!</p><br>
-                <div class="contact-detail">
-                    <i class="fas fa-phone-alt"></i>
-                    <span>+91 89800 05254</span>
-                </div>
-                <div class="contact-detail">
-                    <i class="fas fa-envelope"></i>
-                    <span>Info@protonix.tech</span>
-                </div>
-            </div>
-        </div>
-        <div class="right-section">
-            <div class="form-box">
-                <h2>Get in Touch with Us</h2>
-                <br>
-                <form class="contact-us-pg-form" action="#" method="post">
-                    <label for="email">Email ID</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="contact-no">Contact No.</label>
-                    <input type="tel" id="contact-no" name="contact-no" required>
-
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" required>
-
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
-        </div>
-    </div>
-
- 
+  <!-- Video Background -->
+  <div class="video-background">
+    <video autoplay muted loop id="background-video">
+      <source src="./src/Assets/video2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </div>
 
-  <!-- Footer -->
-  <div id="footer-placeholder"></div>
+  <!-- Page Content -->
+  <div class="content">
+    <!-- Navbar -->
+    <div id="navbar-placeholder"></div>
 
+    <!-- Contact Us Page Container -->
+    <div class="contact-us-pg-container"> 
+      <!-- First Section -->
+      <div class="contact-us-pg-screen-section">
+        <div class="contact-container">
+          <div class="left-section">
+            <div class="info-box">
+              <h1>Contact Us</h1>
+              <p>We are dedicated to empowering businesses through innovative technology solutions. Our team is committed to delivering exceptional support and expertise to meet your unique needs. Connect with us to explore how our tailored IT and AI services can help you achieve your goals. We look forward to building a successful partnership with you!</p><br>
+              <div class="contact-detail">
+                <i class="fas fa-phone-alt"></i>
+                <span>+91 89800 05254</span>
+              </div>
+              <div class="contact-detail">
+                <i class="fas fa-envelope"></i>
+                <span>Info@protonix.tech</span>
+              </div>
+            </div>
+          </div>
+          <div class="right-section">
+            <div class="form-box">
+              <h2>Get in Touch with Us</h2>
+              <br>
+              <form class="contact-us-pg-form" action="#" method="post">
+                <label for="email">Email ID</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="contact-no">Contact No.</label>
+                <input type="tel" id="contact-no" name="contact-no" required>
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+  </div>
 <script>
   // Check if there's a project description in localStorage
   const projectDescription = localStorage.getItem("projectDescription");

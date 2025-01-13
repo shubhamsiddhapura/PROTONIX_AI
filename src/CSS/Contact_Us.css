@@ -4,18 +4,37 @@ body {
     padding: 0;
     background-color: #f7f7f7;
 }
+/* Ensures the video covers the entire viewport */
+video#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the screen without distortion */
+    z-index: -1; /* Keeps the video behind all content */
+}
 
-.contact-container {
+/* Maintains content visibility */
+.content {
+    position: relative;
+    z-index: 1; /* Places content above the video */
+    color: white; /* Ensures readability over the video */
+}
+
+  .contact-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; 
+    justify-content: space-between;
     margin: 80px auto;
     max-width: 1200px;
     padding: 20px;
-    background-color: #f7f7f7;
+     /* Semi-transparent for better readability */
     border-radius: 20px;
     margin-left: 103px;
+    color: white; /* Ensures text contrast */
 }
+
 
 .left-section, .right-section {
     flex: 1;
@@ -30,9 +49,9 @@ body {
     margin: 10px;
     padding: 20px;
     box-sizing: border-box;
-    background-color: #d0d1ce;
+    background-color: white;
     border-radius: 15px;    
-    background-color: #ece9f1;
+    background-color: rgb(20, 19, 19);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.653);
     margin-top: 30px;
 }
@@ -55,7 +74,7 @@ body {
     font-size: 17px;
     letter-spacing: 0.5px;
     line-height: 1.5;
-    color: #333;
+    color: white;
 }
 .info-box h1{
     font-size: 30px;
