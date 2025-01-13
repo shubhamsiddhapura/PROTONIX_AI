@@ -157,13 +157,13 @@ a {
 }
 
 @media(max-width: 450px) {
-    .heading
+    .heading1
     {
         font-size: 1.9rem;
         text-align: center;
     }
 
-    .tech-container{
+    .tech-container1{
         height: 210px;
     }
 
