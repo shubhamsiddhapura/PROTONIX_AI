@@ -22,9 +22,9 @@ window.onload = function () {
                         const mainContent = document.getElementById('main-content');
                         mainContent.style.display = 'block';
                         mainContent.style.opacity = '1'; // Fade in the main content
-                    }, 1000); // Matches fade-out duration
+                    }, 500); // Matches fade-out duration
                 }, 2000); // Logo display duration
             }, 100); // Ensure logo fades in smoothly
-        }, 1000); // Matches video fade-out duration
-    }, 3000); // Video display duration
+        }, 500); // Matches video fade-out duration
+    }, 2000); // Video display duration
 };

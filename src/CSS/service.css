@@ -1,38 +1,38 @@
 /* General Styles */
 body {
   margin: 0;
-  font-family:sans-serif;
+  font-family: sans-serif;
 }
 
 /* Container for the main service page */
 .service-pg-container {
-  /* padding: 20px; */
-  margin-top: 0; /* Adjust margin to remove space above */
+  margin-top: 0;
 }
 
 /* First Section Styles */
 .service-pg-section {
-  position: relative; /* Position relative to allow absolute positioning of text */
-  height: 100vh; /* Full viewport height */
+  position: relative;
+  height: 100vh;
   display: flex;
   justify-content: center; 
   align-items: center;
-  overflow: hidden; /* Hide overflow */
+  overflow: hidden;
+  background-color: #FAF3E0; /* Light beige background */
 }
 
 /* Left Section with Text */
 .service-pg-left {
-  position: absolute; /* Position absolute for overlay effect */
-  top: 50%; /* Center vertically */
-  left: 23%; /* Center horizontally */
-  transform: translate(-40%, -30%); /* Offset by half width and height */
-  color: rgb(7, 7, 7); /* Change text color to white for better contrast */
-  text-align: center; /* Center text */
+  position: absolute;
+  top: 50%;
+  left: 23%;
+  transform: translate(-40%, -30%);
+  color: #4A4A4A; /* Dark beige/soft brown text color */
+  text-align: center;
 }
 
 /* Right Section (Image placeholder) */
 .service-pg-right {
-  display: none; /* Hide the right section since we are using a background image */
+  display: none;
 }
 
 /* Background Image */
@@ -43,33 +43,35 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('../Assets/service_bg2.jpg'); /* Background image */
-  background-size: cover; /* Cover the entire section */
-  background-position: center; /* Center the image */
-  z-index: 0; /* Behind the text */
+  background-image: url('../Assets/service_bg2.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
 }
 
 /* Heading Styles */
 .service-pg-left-h1 {
   font-size: 2.5rem;
-  margin-top: 0; /* Remove margin to center vertically */
+  margin-top: 0;
+  color: #4A4A4A; /* Dark beige/soft brown text color */
 }
 
 /* Paragraph Styles */
 .service-pg-left-para {
   font-size: 1.1rem;
   line-height: 25px;
-  margin-top: 20px; /* Adjust margin for better spacing */
+  margin-top: 20px;
   width: 650px;
   margin-left: 50px;
   text-align: left;
+  color: #4A4A4A; /* Dark beige/soft brown text color */
 }
 
 /* Cards Section Styles */
 .service-pg-cards-section {
   display: flex;
   justify-content: center;
-  margin-top: 50px; /* Space above cards section */
+  margin-top: 50px;
 }
 
 .service-pg-cards-wrapper {
@@ -77,18 +79,6 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
   column-gap: 100px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .service-pg-container {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-  .service-pg-cards-wrapper {
-      grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 /* Card Styles */
@@ -117,7 +107,7 @@ body {
 }
 
 .service-pg-card-front {
-  background-color: #f2f2f2;
+  background-color: #F4E3C1; /* Softer beige for the card background */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -130,7 +120,7 @@ body {
 }
 
 .service-pg-card-back {
-  background-color: #f2f2f2;
+  background-color: #F4E3C1; /* Softer beige for the card background */
   transform: rotateY(180deg);
   display: flex;
   align-items: center;
@@ -144,14 +134,14 @@ body {
 
 .service-pg-card-title {
   font-size: 24px;
-  color: #333;
+  color: #4A4A4A; /* Dark beige/soft brown text color */
   font-weight: 700;
 }
 
 .service-pg-card-description {
   margin-top: 10px;
   font-size: 14px;
-  color: #777;
+  color: #4A4A4A; /* Dark beige/soft brown text color */
   line-height: 1.4;
 }
 
@@ -162,33 +152,51 @@ body {
   margin-top: 14px;
 }
 
-
-
-
 /* Responsive Design */
 @media (max-width: 1200px) {
   .service-pg-cards-wrapper {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .service-pg-cards-wrapper {
-    grid-template-columns: 1fr; /* 1 column for small screens */
+    grid-template-columns: 1fr;
   }
 
   .service-pg-left {
-    left: 10%; /* Adjust left alignment for smaller screens */
-    transform: translate(-10%, -30%); /* Center content */
-    width: 80%; /* Ensure enough width for text */
+    left: 10%;
+    transform: translate(-10%, -30%);
+    width: 80%;
   }
 
   .service-pg-left-h1 {
-    font-size: 2rem; /* Smaller heading size */
+    font-size: 2rem;
   }
 
   .service-pg-left-para {
-    font-size: 1rem; /* Smaller paragraph size */
-    line-height: 20px; /* Adjust line height for smaller screens */
+    font-size: 1rem;
+    line-height: 20px;
   }
+}
+
+/* Arrow button styles */
+.arrow-button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #4A4A4A; /* Dark beige/soft brown */
+}
+
+.left-arrow {
+  position: absolute;
+  left: 20px;
+  color: #4A4A4A;
+}
+
+.right-arrow {
+  position: absolute;
+  right: 20px;
+  color: #4A4A4A;
 }

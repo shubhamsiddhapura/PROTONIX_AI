@@ -1,7 +1,7 @@
 body {
     font-family: sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 1.5rem;
     background-color: #f7f7f7;
 }
 /* Ensures the video covers the entire viewport */

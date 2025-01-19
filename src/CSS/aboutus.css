@@ -42,12 +42,16 @@ section {
     align-items: center;
     gap: 0rem;
     justify-content: center;
+    background-color:#FAF3E0;
+    padding-top: 2rem;
+    padding-bottom: 2rem; 
 }
 
 /* Text Styling */
 .vision-content .text, .mission-content .text {
     flex: 1;
     text-align: left;
+    color: #6B6B6B;
     margin-left: 30px; /* Adjusted margin for better spacing */  
 }
 
@@ -56,6 +60,8 @@ section {
     font-weight: 600; /* Lighter weight for contrast */
     margin-bottom: 1rem; /* Space below heading */
     margin-left: 75px;
+    color: #6B6B6B;
+    
 
 }
 
@@ -97,7 +103,8 @@ section {
     width: 100px;
     height: 100px;
     /* background-color: rgb(241 172 113); */
-    border-radius: 50%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -135,6 +142,8 @@ section {
 .values-section{
     margin: 0px 80px;
     justify-items: center;
+    padding: 1rem;
+    background-color:#FAF3E0;
 }
 
 .values-section h2 {
@@ -142,6 +151,7 @@ section {
     margin-bottom: 1rem; /* Space below heading */
     justify-items: center;
     text-align: center;
+    color: #6B6B6B;
 }
 
 .values-section p { 
@@ -153,6 +163,7 @@ section {
     text-align: justify;
     color: #3b3b3b;
     font-family: sans-serif;
+    background-color:#FAF3E0;
 }
 
 
